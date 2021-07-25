@@ -1,0 +1,9 @@
+page{
+  background: white;
+}
+.card{
+  height: 200rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  
+}

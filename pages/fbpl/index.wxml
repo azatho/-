@@ -1,0 +1,55 @@
+<view class="flex flex-direction ">
+  <view class="bgwhite" style="margin-bottom: 30rpx;height: 120rpx;width: 100%;padding: 30rpx;display: flex;align-items: center;">
+    <image src="{{cdn}}{{merchat_img}}" style="width: 65rpx;height: 65rpx;border-radius: 10rpx;"></image>
+    <view style="margin-left: 30rpx;color: #222222;font-size: 36rpx;">{{merchant_name}}</view>
+  </view>
+  <view class="bgwhite">
+    <view class="flex flex-direction align-center justify-center bgwhite" >
+      <view style="font-size:30rpx;margin-top:20rpx;color: #222222">{{formData.comment_score==1?'非常差':formData.comment_score==2?'差':formData.comment_score==3?'一般':formData.comment_score==4?'满意':'非常满意'}}</view>
+      <view style="width: 300rpx;height: 46rpx;margin-top:30rpx">
+        <rate bind:getscoreI="getscoreI" starSize="large" score="{{score}}" gradable="{{gradable}}"></rate>
+      </view>
+    </view>
+    <view class="flex align-center margin-top" style="margin-top: 50rpx;">
+      <view style="margin-left:30rpx">口味</view>
+      <view style=" width: 180rpx;height: 30rpx;margin-left:30rpx">
+        <rate bind:getscoreI="comment_taste" starSize="normal" score="{{score}}" gradable="{{gradable}}"></rate>
+      </view>
+      <view style="margin-left: 30rpx;">{{formData.comment_taste==1?'非常差':formData.comment_taste==2?'差':formData.comment_taste==3?'一般':formData.comment_taste==4?'满意':'非常满意'}}</view>
+    </view>
+    <view class="flex align-center margin-top">
+      <view style="margin-left:30rpx">环境</view>
+      <view style=" width: 180rpx;height: 30rpx;margin-left:30rpx">
+        <rate bind:getscoreI="comment_huanjing" starSize="normal" score="{{score}}" gradable="{{gradable}}"></rate>
+      </view>
+      <view style="margin-left: 30rpx;">{{formData.comment_huanjing==1?'非常差':formData.comment_huanjing==2?'差':formData.comment_huanjing==3?'一般':formData.comment_huanjing==4?'满意':'非常满意'}}</view>
+    </view>
+    <view class="cu-form-group bg-gray margin flex-direction padding" style="height:280rpx;border-radius:6rpx;">
+      <textarea style="margin: 0 " maxlength="500" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="留下你的评论吧"></textarea>
+      <view class="flex justify-end" style="width:100%">{{formData.comment_content_length}}/500</view>
+    </view>
+    <view class="cu-bar bg-white margin-top">
+      <view class="action">
+        图片上传
+      </view>
+      <view class="action">
+        {{imgList.length}}张
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{cdn+imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="ChooseImage">
+          <text class="cuIcon-cameraadd"></text>
+        </view>
+      </view>
+  </view>
+
+</view>
+  <button class="cu-btn bg-yellow lg  margin-xl round" bindtap="published" style="margin-top:100rpx;" >发表评论</button>
+</view>

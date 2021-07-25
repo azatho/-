@@ -1,0 +1,62 @@
+page{
+  background: #FFC600;
+ 
+}
+.content{
+  margin: 80rpx auto 0;
+  width: 690rpx;
+  height: 970rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.top{
+  height: 85rpx;
+  background: #EFEFEF;
+  line-height: 85rpx;
+  padding-left: 33rpx;
+  font-size: 30rpx;
+}
+.logo{
+width: 145rpx;
+height: 145rpx;
+background: #FFB400;
+border-radius: 10rpx;
+margin: 50rpx auto 30rpx;
+}
+.cline{
+  font-size: 30rpx;
+  font-weight: normal;
+  color: #333333;
+ 
+}
+.cline1{
+  font-size: 36rpx;
+  font-weight: normal;
+  color: #333333;
+ 
+}
+.cline2{
+  
+  font-size: 36rpx;
+  font-weight: normal;
+  color: #333333;
+  letter-spacing: 2rpx;
+  border-bottom:1rpx solid #333333;
+  padding-bottom:1rpx
+ 
+}
+.line{
+  text-align: center;
+}
+
+.qrcode{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 50rpx auto;
+  background-color: red;
+}
+.delayPay{
+  margin-top: 50rpx;
+ text-align: center;
+}

@@ -1,0 +1,423 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.16.0",
+  "appid": "wx8c1c9697aee41ac8",
+  "projectname": "offlineC",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/win/index",
+          "pathName": "pages/win/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yemx/index",
+          "pathName": "pages/yemx/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/wddd/index",
+          "pathName": "pages/wddd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/myComments/index",
+          "pathName": "pages/myComments/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setting/index",
+          "pathName": "pages/setting/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/spxq/index",
+          "pathName": "pages/spxq/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tjdd/index",
+          "pathName": "pages/tjdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/qrzf/index",
+          "pathName": "pages/qrzf/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ddxq/index",
+          "pathName": "pages/ddxq/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fbpl/index",
+          "pathName": "pages/fbpl/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setpay/index",
+          "pathName": "pages/setpay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yzm/index",
+          "pathName": "pages/yzm/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setpay/index",
+          "pathName": "pages/setpay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setting/index",
+          "pathName": "pages/setting/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setting/index",
+          "pathName": "pages/setting/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yjfk/index",
+          "pathName": "pages/yjfk/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/help_list/index",
+          "pathName": "pages/help_list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/problem/index",
+          "pathName": "pages/problem/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yuyue/index",
+          "pathName": "pages/yuyue/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/reservation/index",
+          "pathName": "pages/reservation/index",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/reservation/index",
+          "pathName": "pages/reservation/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/reservation/index",
+          "pathName": "pages/reservation/index",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tjdd/index",
+          "pathName": "pages/tjdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yyxq/index",
+          "pathName": "pages/yyxq/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/reservation/index",
+          "pathName": "pages/reservation/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/InviteFriends/index",
+          "pathName": "pages/InviteFriends/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 30,
+          "name": "pages/yejlxq/index",
+          "pathName": "pages/yejlxq/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tjdd/index",
+          "pathName": "pages/tjdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/index",
+          "pathName": "pages/win/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 33,
+          "name": "pages/yuyueSuccess/index.wxml",
+          "pathName": "pages/yuyueSuccess/index.wxml",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yysuccess/index",
+          "pathName": "pages/yysuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tjdd/index",
+          "pathName": "pages/tjdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/paysuccess/index",
+          "pathName": "pages/paysuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/qrzf/index",
+          "pathName": "pages/qrzf/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/friendsShare/index",
+          "pathName": "pages/friendsShare/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/homepage/index",
+          "pathName": "pages/homepage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/qrzf/index",
+          "pathName": "pages/qrzf/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/paysuccess/index",
+          "pathName": "pages/paysuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fbpl/index",
+          "pathName": "pages/fbpl/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/myComments/index",
+          "pathName": "pages/myComments/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tjdd/index",
+          "pathName": "pages/tjdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yuyue/index",
+          "pathName": "pages/yuyue/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/reservation/index",
+          "pathName": "pages/reservation/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fkjl/index",
+          "pathName": "pages/fkjl/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fkxq/fkxq",
+          "pathName": "pages/fkxq/fkxq",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/waiter/filterOrder/filterOrder",
+          "pathName": "pages/waiter/filterOrder/filterOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/waiter/clientOrder/clientOrder",
+          "pathName": "pages/waiter/clientOrder/clientOrder",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

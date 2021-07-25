@@ -1,0 +1,14 @@
+<view class="padding-lr text-sm-gray">
+  <view style="margin-top:55rpx;">验证码已发送至</view>
+  <view class="flex align-center margin-top">
+    <view>+86 {{phone}}</view>
+    <view class="text-yellow margin-left">{{ms}}</view>
+  </view>
+
+  <yzm bindvalueSix="valueSix" input_value="{{inputData.input_value}}" value_length="{{inputData.value_length}}" isNext="{{inputData.isNext}}" get_focus="{{inputData.get_focus}}" focus_class="{{inputData.focus_class}}" value_num="{{inputData.value_num}}"
+    height="{{inputData.height}}" width="{{inputData.width}}" see="{{inputData.see}}" interval="{{inputData.interval}}">
+  </yzm>
+  <view class="bg-yellow text-center text" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:100rpx" bindtap="next">
+    下一步
+  </view>
+</view>

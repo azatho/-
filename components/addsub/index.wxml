@@ -1,0 +1,11 @@
+  <view class="add_sub">
+    <view class="sub" bindtap="sub" style="width: {{size}}rpx;height: {{size}}rpx;border-radius: {{size}}rpx;">
+      <text>-</text>
+    </view>
+    <view class="number" style="width: {{size}}rpx;height: {{size}}rpx;">
+    {{number}}
+    </view>
+    <view class="add" bindtap="add" style="width: {{size}}rpx;height: {{size}}rpx;border-radius: {{size}}rpx;">
+       <text>+</text>
+    </view>
+  </view>

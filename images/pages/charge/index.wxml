@@ -1,0 +1,26 @@
+
+<view class="flex flex-direction padding" style="margin-top:100rpx">
+  <text>充值金额</text>
+  <view class="grid justify-between ">
+    <block wx:for="{{list}}" wx:for-item="item" wx:key>
+      <view data-id='{{index}}' class="flex flex-direction margin-top-sm justify-center {{cut==index?'items':'item'}}" bindtap="select">
+        <view style="font-size:36rpx;text-align: center;">{{item.title}}元</view>
+        <view style="font-size:20rpx;text-align: center;">赠送{{item.zs}}元</view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- <view class="flex flex-direction ">
+  <text class="padding">充值方式</text>
+  <radio-group class="block">
+    <view class="cu-form-group">
+      <view class="title">微信</view>
+      <radio class="yellow margin-left-sm"></radio>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">支付宝</view>
+      <radio class="yellow margin-left-sm"></radio>
+    </view>
+  </radio-group>
+</view> -->
+<button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:300rpx" bindtap="sub"> 微信支付</button>

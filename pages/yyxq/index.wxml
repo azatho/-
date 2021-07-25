@@ -1,0 +1,85 @@
+<!--pages/yuyue/index.wxml-->
+<view class="my_yuyue">
+  <view class="yuyue_list">
+      <view class="yuyue_title">
+          <view class="touxiang">
+            <image src="{{cdn+subInfo.mer_logo}}"></image>
+            <view>{{subInfo.merchant_name}}</view>
+          </view>
+      </view>
+      <view class="yuyue_content">
+          <view class="yuyuemsg">
+            <view class="xian"></view>
+            <view class="yuyuexinxi">预约信息</view>
+            <view class="xian"></view>
+          </view>
+          <view class="yuyue_content_list">
+            <text decode="{{true}}">联&nbsp;&nbsp;系&nbsp;&nbsp;&nbsp;人：</text>
+            <view>{{subInfo.subscribe_name}}</view>
+          </view>
+          <view class="yuyue_content_list">
+            <text decode="{{true}}">联系方式：</text>
+              <view>{{subInfo.subscribe_phone}}</view>
+          </view>
+          <view class="yuyue_content_list">
+              <text decode="{{true}}">预&nbsp;&nbsp;约&nbsp;码：</text>
+              <view class="yuyuema">
+                  {{subInfo.subscribe_id}}
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+            <text decode="{{true}}">预约日期：</text>
+              <view>{{subInfo.subscribe_datetime}}</view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>预约时间：</text>
+              <view>{{subInfo.subscribe_time}}</view>
+          </view>
+          <view class="yuyue_content_list">
+              <text decode="{{true}}">套&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;餐：</text>
+              <view>
+                  {{subInfo.taocan_name}} ￥{{subInfo.tao_can_price/100}}
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+            <text>桌台信息：</text>
+            <view>{{subInfo.subscribe_info.region_name}} {{subInfo.subscribe_info.region_number}} {{subInfo.subscribe_info.min_people+'-'+subInfo.subscribe_info.max_people}}人桌 {{subInfo.subscribe_info.type}}</view>
+          </view>
+          <view class="yuyue_content_list" wx:if="{{subInfo.is_pay_sub_cash!=0}}">
+              <text decode="{{true}}">保&nbsp;&nbsp;证&nbsp;&nbsp;金：</text>
+              <view>
+                  ￥{{subInfo.subscribe_cash/100}}
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>用餐人数：</text>
+              <view>
+                  {{subInfo.subscribe_number}}人
+              </view>
+          </view>
+          <view class="yuyuemsg">
+            <view class="xian"></view>
+            <view class="yuyuexinxi">其他信息</view>
+            <view class="xian"></view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>提交时间：</text>
+              <view>
+                 {{subInfo.subscribe_submit}}
+              </view>
+          </view>
+      </view>
+  </view>
+  <view class="qx">{{cancel_time}} 前可取消，并退还保证金</view>
+  <view>
+    <view wx:if='{{status=="undefined"}}' class="yuyuefoot"  style="display: flex;justify-content: flex-end;">
+      <view bindtap='delYuDing' data-item="{{item}}" class="yy_bg" style="background-color: #DDDDDD;border: none;color: #999999;">删除</view>
+    </view>
+    <view class="yuyuefoot" wx:else>
+      <view class="yy_bg yyqx1" wx:if='subInfo.catch_status==0'>取消预约</view>
+      <view class="yy_bg yyqx" wx:else bindtap="qxyy">取消预约</view>
+      <view style="margin: 0 11rpx;"><button class="yy_btn yy_bg" style="margin: 0;border: none;width: 198rpx;"  open-type="share" data-id="{{subInfo.subscribe_id}}">邀请好友</button></view>
+      <view class="yy_bg" bindtap='yjdd' data-item="{{status}}" >{{status}}</view>
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,50 @@
+<view class="flex flex-direction ">
+  <view class="flex flex-direction bg-white align-center justify-center padding-tb-xl margin-bottom-sm">
+    <view style="font-size:26rpx;color:#333333;">支付金额 </view>
+    <view style="font-size:60rpx;color:#333333;">{{money/100}}</view>
+  </view>
+  <radio-group class="block" bindchange='isPayWay'>
+    <view class="cu-form-group">
+      <view class="title flex">
+        <view>
+          <image style="width:55rpx;height:55rpx;margin-right:20rpx;" src="/images/icon_ye.png"></image>
+        </view>
+        <view>账户余额({{account_balance}})</view>
+      </view>
+      <view>
+        <radio class="yellow margin-left-sm" checked='{{account_balance}}' value='0' disabled='{{!account_balance}}'></radio>
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title flex">
+        <view>
+          <image style="width:55rpx;height:55rpx;margin-right:20rpx;" src="/images/icon_wx.png"></image>
+        </view>
+        <view>微信</view>
+      </view>
+      <view>
+        <radio class="yellow margin-left-sm" checked='{{!account_balance}}' value='1'></radio>
+      </view>
+    </view>
+  </radio-group>
+  <!-- <button class="hydf" open-type="share" wx:if="{{goodFriends}}">
+    <view style="display:flex;align-items: center;">
+      <view style="width:55rpx;height:55rpx;">
+        <image src="../../images/share.png" style="width:100%;height:100%;"></image>
+      </view>
+      <view style="display:flex;flex-direction: column;margin-left:20rpx;align-items:start">
+        <view style="color:#333333;height:50rpx;">好友代付</view>
+        <view>仗义疏财怎么能少得了TA呢？</view>
+      </view>
+    </view>
+    <view>
+      <mp-icon icon="arrow" color="black" size="{{12}}"></mp-icon>
+    </view>
+  </button> -->
+  <button class="cu-btn bg-yellow lg text-white margin-xl round" bindtap='goPay' style="margin-top:100rpx;">确认支付</button>
+</view>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>加载中...</view>
+</view>

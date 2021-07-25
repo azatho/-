@@ -1,0 +1,25 @@
+<view class="flex flex-direction padding justify-center ">
+  <view class="flex justify-center" style="margin-top:100rpx;">
+    <image style="width:128rpx;height:128rpx;" src="../../images/select_icon.png"> </image>
+  </view>
+  <text class="text-center text-black" style="margin-top:30rpx;font-size:36rpx;">支付成功</text>
+  <view wx:if="{{oldPage==1}}">
+    <view class="yysuccess" style="margin-top: 70rpx;">支付金额：{{cash}}</view>
+    <button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:80rpx" bindtap="sub"> 完成</button>
+  </view>
+  <view wx:else>
+    <view class="yysuccess">您已支付成功，您的取餐码是：{{meal_code}}</view>
+    <view class="yysuccess">取餐码后续可到我的订单查看</view>
+    <button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:80rpx" bindtap="sub"> 查看订单</button>
+    <view style="text-align:center;" bindtap="lqhb"><image src="../../images/lqhb.png" mode='widthFix'></image></view>
+  </view>
+   <view class="msk" wx:if="{{hb && cash!=0}}" bindtap="qx">
+       <view class="envelope" style="background: url('https://cdn.jianyunkeji.cn/store/img/hb.png')no-repeat top center;background-size:100% 100%">
+            <view style="height:330rpx;"></view>
+            <view style="text-align:center;color:#FFC21C;font-size:36rpx;">恭喜你获得</view>
+            <view style="color:#FFC21C;font-size:60rpx;text-align:center">{{cash/100}}元</view>
+            <view style="height:30rpx"></view> 
+            <view style="background:rgba(255,180,0,1);border-radius:35rpx;width:370rpx;height:70rpx;margin:0 auto;font-size:30rpx;font-family:Adobe Heiti Std;font-weight:normal;color:rgba(51,51,51,1);line-height:70rpx;text-align:center" bindtap="accept">收下红包</view>
+       </view>
+   </view>
+  </view>

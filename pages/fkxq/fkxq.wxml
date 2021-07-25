@@ -1,0 +1,21 @@
+<!--pages/fkxq/fkxq.wxml-->
+<view style="padding: 30rpx;">
+  <view>
+    <view class="flex">
+      <view >反馈类别:</view>
+      <span style="margin-left: 30rpx;color: black;font-size: 26rpx;">{{info.feedback_type}}</span>
+      </view>
+    <view style="display: flex;margin-top: 30rpx;">
+      <view style="margin-right: 30rpx;">反馈内容:</view>
+      <span style="word-break: break-all;width: 550rpx;color: black;font-size: 26rpx;">{{info.feedback_content}}</span>
+    </view>
+    <view style="display: flex;margin-top: 30rpx;">
+      <view style="margin-right: 30rpx;">反馈时间:</view>
+      <span style="word-break: break-all;color: black;font-size: 26rpx;">{{info.feedback_addtime}}</span>
+    </view>
+  </view>
+  <view style="display: flex;border-top:2rpx solid #f5f5f5;margin-top: 20rpx;padding-top: 20rpx;">
+   <view style="margin-right: 30rpx;"> 平台回复:</view>
+    <span style="word-break: break-all;width: 550rpx;color: black;font-size: 26rpx;">{{info.feedback_answer==""?'暂无回复内容':info.feedback_answer}}</span>
+  </view>
+</view>

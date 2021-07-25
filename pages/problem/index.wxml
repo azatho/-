@@ -1,0 +1,23 @@
+<!--pages/problem/index.wxml-->
+<view wx:if="{{!titleList.length}}" class="none">
+   <image src="{{cdn}}/store/icon/nodata.png" style="width: 480rpx;height: 360rpx;margin-top: 200rpx;"></image>
+</view>
+<view class="common" bindtap='click_active' data-index="{{index}}"  wx:for="{{titleList}}" wx:key>
+   <view class="problem">
+      <view style="display: flex;align-items: center;">
+         <view class="problem_suoyin" style="display:flex;width: 34rpx;height: 33rpx;color:#fff;background:url('../../images/suoyin.png')no-repeat top center;background-size:100% 100%;text-align:center;;">
+            <!-- <image src='../../images/suoyin.png' style="width: 100%;height:100%;position: absolute;left:0;z-index:1" mode="aspectFit"></image> -->
+         <text style="z-index:100;">{{index+1}}</text>
+         </view>
+         <view class="problem_title">
+            {{item.title}}
+         </view>
+      </view>
+         <mp-icon icon="arrow"  size="{{12}}" class="jt1 {{index === suoyin?'jt2':''}}"></mp-icon>
+      </view>
+   <view class="problem_list {{index === suoyin?'active':''}}">
+      <rich-text class="problem_list_text" nodes="{{item.htmlString}}"></rich-text>
+      <!-- <textarea  auto-height='true' maxlength='-1' disabled value='。'>
+      </textarea>   -->
+   </view> 
+</view>

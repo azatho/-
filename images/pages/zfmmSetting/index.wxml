@@ -1,0 +1,14 @@
+
+<view class="flex justify-between align-center solids-bottom bg-white padding-lr" style="height:100rpx;"
+bindtap="xgpsd">
+  <text>修改支付密码</text>
+  <view>
+    <text class="cuIcon-right lg text-gray"> </text>
+  </view>
+</view>
+<view class="flex justify-between align-center solids-bottom bg-white padding-lr" style="height:100rpx;" bindtap="wjpsd">
+  <text>忘记支付密码</text>
+  <view>
+    <text class="cuIcon-right lg text-gray"> </text>
+  </view>
+</view>

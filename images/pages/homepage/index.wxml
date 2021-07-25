@@ -1,0 +1,206 @@
+<view style="flex:1;height:100px;" class="flex flex-direction">
+  <view class="head">
+    <text style="font-size:36rpx;color:#333333;">赵小姐在成都八八八八八八店</text>
+    <view class="head_xx">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="head_xx_content">
+        <text>营业时间：12:00</text>
+        <text>￥20/人均</text>
+        <text>新用户首单减</text>
+      </view>
+      <view class="head_xx_grzx" bindtap="setting">
+        <image src="/images/icon_my.png" style="width: 95rpx;height: 125rpx;"></image>
+      </view>
+    </view>
+    <view class="head_dz radius shadow bg-white" bindtap="dh">
+      <text class="flex align-center">管城区中兴南路与福禄街交叉口嘉亿东方大厦1207</text>
+      <view class="flex align-center r_content">
+        <view class="flex align-center content">
+          <image src="/images/icon_dt.png"></image>
+          <view style="font-size:22rpx;color:#333333 ">去这里</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="i_cd" style="top:0px">
+    <view class="i_tag">
+      <view class="i_tag_item" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id='{{index}}'>
+        <view class="{{index==tabcur?'i_tag_item_title':''}}">{{list[index]}}</view>
+        <view class="{{index==tabcur?'i_tag_item_index':''}}"></view>
+      </view>
+    </view>
+  </view>
+  <view style="flex:1;height: 100px;">
+    <scroll-view scroll-y="true" style="height:100%">
+      <view class="i_content" style="height:100%">
+        <!-- 商品展示 -->
+        <block wx:if="{{tabcur=='0'}}">
+          <view class="VerticalBox" style="height:100%">
+            <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:100%">
+              <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list_cd}}" wx:key bindtap='tabSelectcp' data-id="{{index}}">
+                Tab-{{item.name}}
+              </view>
+            </scroll-view>
+            <scroll-view class="VerticalMain" scroll-y scroll-with-animation scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain" style="height:100%">
+              <view class="padding-top padding-lr" wx:for="{{list_cd}}" wx:key id="main-{{index}}">
+                <view class='cu-bar solid-bottom bg-white'>
+                  <view class='action'>
+                    <text class='cuIcon-title text-green'></text> Tab-{{item.name}} </view>
+                </view>
+                <view class="cu-list menu-avatar lb">
+                  <view class="item" wx:for="{{5}}" wx:key data-id='{{index}}' bindtap="spxq">
+                    <image></image>
+                    <view class="content">
+                      <text>特色花甲</text>
+                      <view class="btm">
+                        <text>20</text>
+                        <view class="add" catchtap="add">
+                          <text>+</text>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+        </block>
+        <!-- 评价列表 -->
+        <view wx:if="{{tabcur=='1'}}">
+          <!-- 评价分类 -->
+          <view class="i_pjfl">
+            <view class="i_pjfl_item" wx:for="{{list2}}" wx:key bindtap='pjflSelect' data-id='{{index}}'>
+              <view class="{{index==pjflcur?'i_pjfl_item_title_s':'i_pjfl_item_title'}}">{{list2[index].name}}</view>
+            </view>
+          </view>
+          <!-- 评价列表 -->
+          <view class="i_pjlb">
+            <view class="i_pjlb_item" wx:for="{{list3}}" wx:key bindtap='xqSelect' data-id='{{index}}'>
+              <view class="i_pjlb_item_head">
+                <image class="i_img" src="{{userInfo.avatarUrl}}"></image>
+                <view class="i_pjlb_item_head_content">
+                  <view>永***星</view>
+                  <view class="rate">
+                    <rate bind:getscoreI="getscoreI" starSize="small" score="{{score}}" gradable="{{gradable}}"></rate>
+                  </view>
+                </view>
+                <view>2018-06-02</view>
+              </view>
+              <view class="i_pjlb_item_text"> 真的很棒！物有所值真的很棒！物有所值真的很棒！物有所值真的很棒！物有所值真的很棒！物有所值真的很棒！物有所值</view>
+              <view class="i_pjlb_item_img">
+                <view class="img_item" wx:for="{{list3}}" wx:key bindtap='imgSelect' data-id='{{index}}'>
+                  <image style="width: 130rpx;height: 130rpx;" src="{{list3[index]}}"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+
+
+        </view>
+        <!-- 商家信息 -->
+        <view wx:if="{{tabcur=='2'}}">
+          <view class="xx_dz">
+            <text class="cuIcon-location lg text-yellow" style="width:27rpx;height:34rpx;margin-right：30rpx;"></text>
+            <view>中国河南省郑东新区中兴路商都路交叉口建正东方中心A座20楼390室</view>
+          </view>
+          <view class="xx_dz">
+            <text class="cuIcon-dianhua lg text-yellow" style="width:30rpx;height:30rpx;margin-right：30rpx;"></text>
+            <view>联系电话：0371-6532110</view>
+          </view>
+          <view class="xx_dz">
+            <text class="cuIcon-dianhua lg text-yellow" style="width:30rpx;height:30rpx;margin-right：30rpx;"></text>
+            <view>商家服务：到店自取、提前订餐、扫码点餐</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="flex" style="height:100rpx;">
+  <view class="qd" bindtap="qd">
+    <view class="cu-avatar sm radius bg-white" style="margin-left:50rpx;width:60rpx;height:46rpx;">
+      <image src="/images/icon_ms.png" style="width:60rpx;height:46rpx;"></image>
+      <view class="cu-tag badge">9</view>
+    </view>
+    <view style="font-size:42rpx;font-family:HiraginoSansGB;font-weight:normal;color:rgba(216,15,15,1);margin-left:50rpx;">￥100</view>
+    <view style="font-size:26rpx;font-family:PingFang SC;font-weight:400;text-decoration:line-through;color:rgba(153,153,153,1);margin-left:30rpx;">￥120</view>
+  </view>
+  <text class="submit" bindtap="gm">选好了</text>
+</view>
+<!-- 已选商品弹出窗  catchtouchmove="{{modalName=='Modal'?'true':'false'}}"-->
+<view class="cu-modal bottom-modal {{modalName=='Modal'?'show':''}}" style="bottom: 100rpx;" bindtap="hideModal">
+  <view class="cu-dialog " catchtap="true">
+    <view class="cu-bar bg-white">
+      <view class="action text-back">已选商品</view>
+      <view class="action text-blue">清空</view>
+    </view>
+    <view class="lb">
+      <scroll-view scroll-y="true" style="height: 500rpx;">
+        <view class="item" wx:for="{{5}}" wx:key data-id='{{index}}'>
+          <image></image>
+          <view class="content">
+            <text>特色花甲</text>
+            <view class="btm">
+              <text>20</text>
+              <addsub bind:submit="submit" number="9" index="{{index}}" size="40"></addsub>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<!-- 商品规格选择弹出框 -->
+<view class="cu-modal bottom-modal {{modalNamegg=='Modal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog" catchtap="true">
+    <view class="flex padding-sm bg-white">
+      <image style="width:150rpx;height:150rpx;border: 2rpx solid #ffb400;margin-right:20rpx;"></image>
+      <view class="flex flex-direction flex-sub" style=" text-align: start;">
+        <view class="flex justify-between">
+          <text class="text-lg text-black">特色花甲</text>
+          <text class="cuIcon-close xl text-gray" bindtap="hideModal"></text>
+        </view>
+        <text class="margin-top-sm text-sm">已选：加辣、加汤</text>
+        <text class="margin-top-sm text-red text-xl">￥20</text>
+      </view>
+    </view>
+    <view class="flex justify-between padding-sm bg-white">
+      <text>数量</text>
+      <addsub bind:submit="submit" number="1" index="{{index}}" size="40"></addsub>
+    </view>
+    <view class="sxlb bg-white">
+      <scroll-view scroll-y="true" style="height: 500rpx;">
+        <view class="item text-left">
+          <block wx:for="{{goods_sku_property}}" wx:for-item="item" wx:key>
+            <view class="padding-sm" data-id='{{item.sku_index}}'>{{item.sku_name}}</view>
+            <view class="flex flex-wrap padding-lr-sm">
+              <block wx:for="{{goods_sku_values}}" wx:for-item="itemz" wx:key wx:if="{{item.sku_index==itemz.sku_parent}}">
+                <view class="{{itemz.isSelect=='1'?'isSelect':'isSelect_no'}}" style="width:auto;margin:10rpx;padding:10rpx;" data-id="{{itemz}}" catchtap="select">{{itemz.sku_name}}</view>
+              </block>
+
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="flex align-center justify-center bg-yellow" style="height:100rpx;">确认</view>
+
+  </view>
+</view>
+<view class="cu-modal {{modalName=='DialogModal'?'show':''}} " >
+  <view class="cu-dialog bg-white" catchtap="true">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <!-- <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view> -->
+    </view>
+    <view class="padding-xl">
+      系统监测到您还没有桌号信息，请扫描餐桌上的二维码进行点餐。
+    </view>
+    <view class="flex  cu-bar bg-white  solids-top " style="height:100rpx;">
+      <view class="basis-df solids-right" style="height:100rpx;line-height:100rpx;" bindtap="hideModal">我要打包</view>
+      <view class="basis-df text-yellow"  style="height:100rpx;line-height:100rpx;" bindtap="getScancode">立即扫码</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<view class="flex flex-direction ">
+<view class="flex flex-direction align-center justify-center">
+  <view style="font-size:30rpx;margin-top:30rpx">“非常满意”</view>
+  <view style="width: 300rpx;height: 46rpx;margin-top:30rpx">
+    <rate bind:getscoreI="getscoreI" starSize="large" score="{{score}}" gradable="{{gradable}}"></rate>
+  </view>
+</view>
+<view class="flex align-center margin-top">
+  <view style="margin-left:30rpx">口味</view>
+  <view style=" width: 180rpx;height: 30rpx;margin-left:30rpx">
+    <rate bind:getscoreI="getscoreI" starSize="small" score="{{score}}" gradable="{{gradable}}"></rate>
+  </view>
+</view>
+<view class="flex align-center margin-top">
+  <view style="margin-left:30rpx">环境</view>
+  <view style=" width: 180rpx;height: 30rpx;margin-left:30rpx">
+    <rate bind:getscoreI="getscoreI" starSize="small" score="{{score}}" gradable="{{gradable}}"></rate>
+  </view>
+</view>
+<view class="cu-form-group bg-gray margin flex-direction padding" style="height:280rpx;border-radius:6rpx;">
+  <textarea style="margin: 0 " maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="留下你的评论吧"></textarea>
+  <view class="flex justify-end" style="width:100%">500/500</view>
+</view>
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    图片上传
+  </view>
+  <view class="action">
+    {{imgList.length}}/9
+  </view>
+</view>
+<view class="cu-form-group">
+  <view class="grid col-4 grid-square flex-sub">
+    <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+      <image src='{{imgList[index]}}' mode='aspectFill'></image>
+      <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+    <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+      <text class="cuIcon-cameraadd"></text>
+    </view>
+  </view>
+</view>
+  <button class="cu-btn bg-yellow lg  margin-xl round" style="margin-top:100rpx;" >发表评论</button>
+</view>

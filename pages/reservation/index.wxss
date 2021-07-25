@@ -1,0 +1,474 @@
+/* pages/reservation/index.wxss */
+.body{
+  padding: 0 30rpx;
+}
+.reservation {
+  background: #fff;
+  overflow: hidden;
+  padding: 20rpx 0;
+  margin-top: 132rpx;
+}
+.store_logo {
+  width: 145rpx;
+  height: 145rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 68rpx;
+}
+.store_logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.reservation_title {
+  text-align: center;
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-top: 100rpx;
+}
+.Booking_information{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.Booking_information view:nth-child(1){
+  height:2px;
+  background:rgba(245,245,245,1);
+  flex: 1;
+  margin-right: 10rpx;
+}
+.Booking_information view:nth-child(3){
+  height:2px;
+  background:rgba(245,245,245,1);
+  flex: 1;
+  margin-left: 10rpx;
+}
+.picker{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  align-items: center;
+}
+.picker view:nth-child(1){
+  display: flex;
+  align-items: center;
+  color:rgba(51,51,51,1);
+}
+.picker view:nth-child(2){
+  display: flex;
+  align-items: center;
+  color:rgba(51,51,51,1);
+}
+.prop_date{
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background:rgba(0, 0, 0, .5);
+   z-index: 10000;
+}
+.prop_date_footer{
+  width: 100%;
+  height: 800rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius:30rpx 30rpx 0rpx 0rpx;
+}
+.prop_date_footer_title_top{
+  width: 100%;
+  border-bottom: 2rpx solid #f5f5f5;
+  text-align: center;
+  line-height: 90rpx;
+  color: #333333;
+  font-size: 26rpx;
+}
+.prop_date_footer_title_bottom{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.timer{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-bottom: 20rpx;
+  color: #333333;
+  font-size: 26rpx;
+}
+.prop_date_footer_title_bottom_box{
+  width: 120rpx;
+  height: 140rpx;
+  border: 1rpx solid #CCCCCC;
+  text-align: center;
+  margin: 10rpx;
+  display: inline-block;
+  border-radius: 8rpx;
+}
+.date{
+  color: #333333;
+  font-size: 30rpx;
+  padding-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+.guanbi{
+  position: absolute;
+  width: 36rpx;
+  height: 36rpx;
+  right: 23rpx;
+  top: 27rpx;
+}
+.prop_date_footer_title_btn {
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  height: 120rpx;
+  border-top: 2rpx solid #f5f5f5;
+}
+.sureBtn {
+  margin-top: 24rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius:30px 30px;
+  background-color: #FFB400;
+  font-size: 36rpx;
+  color: #333;
+}
+.prop_date_footer_title_bottom_foot {
+  width: 190rpx;
+  height: 100rpx;
+  border: 1rpx solid #CCCCCC;
+  text-align: center;
+  margin: 10rpx;
+  display: inline-block;
+  border-radius: 8rpx;
+}
+.food {
+  color: #333333;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.stive {
+  /* color: #FFB400; */
+  border: 1rpx solid #FFB400;
+  background-color: #FFF2D3;
+}
+.fontColor {
+  color: #FFB400;
+}
+.menu{
+  display: flex;
+  padding: 30rpx 10rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(245, 245, 245, 1);
+}
+.menu_title{
+  display: flex;
+  align-items: center;
+}
+.menu_title .menu_content{
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+}
+.menu_title image{
+   width: 36rpx;
+   height: 36rpx;
+   margin-right:20rpx;
+}
+.out {
+  overflow: hidden; 
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0px 20rpx;
+}
+
+/*设置行内块*/
+
+.out  .item {
+  width: 330rpx;
+  background: rgba(245, 245, 245, 1);
+  display: inline-block;
+  margin-right: 10px;
+  height: 140rpx;
+  overflow: hidden;
+}
+.out scroll-view{
+  height: 0;
+  overflow: hidden;
+  transition: all .3s;
+}
+.active{
+  overflow: hidden;
+  padding: 20rpx 20rpx;
+}
+.active scroll-view{
+  height: 140rpx;
+}
+mp-icon{
+  transition: all .2s;
+}
+.jt{
+   transform: rotate(-90deg);
+}
+.inner{
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+}
+.inner .inner_left{
+   width: 116rpx;
+   height: 116rpx;
+}
+.inner .inner_left image{
+  width: 100%;
+  height: 100%;
+}
+.inner .inner_right{
+  height: 114rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10rpx;
+}
+.inner_right_title{
+  width: 200rpx;
+  font-size:26px;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all ;
+}
+.inner_right_title{
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.inner_right_price{
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(216,15,15,1);
+}
+/* 桌台信息 */
+.zuo_tai_content{
+  padding: 30rpx 20rpx;
+}
+.zuo_tai_content .zuo_tai_area view:nth-child(1){
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+}
+.zuo_tai_content .zuo_tai_area view:nth-child(2){
+  display: flex;
+  flex-wrap: wrap;
+}
+.zuo_tai_content .zuo_tai_area view:nth-child(2) view{
+  margin-right: 20rpx;
+  margin-top:20rpx;
+  width: 180rpx;
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(204, 204, 204, 1);
+}
+.zuo_tai_content .zuo_tai_details{
+  margin: 20rpx 0;
+}
+.zuo_tai_content .zuo_tai_details view:nth-child(1){
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+}
+.zuo_tai_content .zuo_tai_details view:nth-child(2){
+  display: flex;
+  flex-wrap: wrap;
+}
+.zuo_tai_content .zuo_tai_details view:nth-child(2) .zuo_tai_details_list{
+  margin-right: 20rpx;
+  margin-top:20rpx;
+  width: 180rpx;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(204, 204, 204, 1);
+}
+.ycrs{
+  padding: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ycrs view{
+  width: 111.1rpx;
+  padding:20rpx 0;
+  border-radius:4rpx;
+  background: rgba(204, 204, 204, 1);
+  margin-right:20rpx;
+  margin-top: 20rpx;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  text-align: center;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.ycrs view.transport{
+   width: 239.8rpx;
+}
+.ycrs  .isActive{
+  background:rgba(255,242,211,1);
+}
+.xz_area_active{
+  background:rgba(255,242,211,1);
+  color: rgba(255, 180, 0, 1)!important;
+}
+.xz_area_active .wz{
+  color: rgba(255, 180, 0, 1)!important;
+}
+.lianxi{
+  margin-top: 30rpx;
+}
+.lianxi-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 20rpx;
+}
+.lianxi-child .user_name{
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+}
+.lianxi-child .input_name input{
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+  text-align: right;
+}
+.xb-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 20rpx;
+}
+.gender{
+  display: flex;
+}
+.gender view{
+    width: 111rpx;
+    height: 55rpx;
+    background: rgba(204, 204, 204, 1);
+    text-align: center;
+    line-height: 55rpx;
+    border-radius:4rpx;
+}
+.gender view:nth-child(1){
+  margin-right: 20rpx;
+}
+.gender .genderActive{
+  background:rgba(255,242,211,1);
+  border-radius:4rpx;
+}
+.qtxinxi{
+  margin-top: 20rpx;
+}
+.bzxinxi{
+  margin-top: 10rpx 0 20rpx;
+}
+.bzxinxi textarea{
+  padding: 20rpx 20rpx;
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(153,153,153,1);
+}
+.tswz{
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(153,153,153,1)
+}
+.footer-submit{
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+}
+.footer-submit view{
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background:rgba(255,180,0,1);
+  border-radius:45rpx;
+  font-size:36rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.comfirme{
+  font-size:26rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1)!important;
+}
+.select_pay{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.pay_order{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.pay_order view{
+  margin: 0 10rpx;
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+ image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.pay_order:nth-child(2){
+  margin-left: 20rpx;
+  margin-bottom: 0;
+}
+.yuyuemsg{
+  /* height: 260rpx; */
+  margin: 10rpx 0;
+  padding: 20rpx;
+  padding-top: 10rpx;
+  background-color: #fff;
+}
+.sssss{
+  background-color: violet;
+}
+.notach{
+  pointer-events:none;
+  background-color: #f5f5f5;
+}

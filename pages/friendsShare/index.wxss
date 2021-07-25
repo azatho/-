@@ -1,0 +1,63 @@
+/* pages/friendsShare/index.wxss */
+
+page{
+    background: #fff;
+}
+#pay_order .pay_order_title {
+  height: 200rpx;
+  background: #ffb400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pay_order .pay_order_title view {
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #333;
+}
+
+.pay_amount {
+  background: #fff;
+}
+
+.pay_amount_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 20rpx;
+}
+
+.pay_amount_title text {
+  background: #ffc600;
+  margin: 0 10rpx;
+  color: #333;
+}
+
+.pay_amount_instructions_say {
+  margin-top: 5rpx;
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: rgba(153, 153, 153, 1);
+  background: #fff;
+  padding: 30rpx 20rpx;
+  border-top: 1px solid #ccc;
+}
+.pay_amount_instructions_content view{
+  margin-top: 5rpx;
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: rgba(153, 153, 153, 1);
+  background: #fff;
+  margin: 20rpx 0;
+  padding: 0 20rpx;
+}
+.weui-cell__hd{
+  display: flex;
+  align-items: center;
+}
+radio .wx-radio-input.wx-radio-input-checked{
+ background:#FFC600!important;
+}

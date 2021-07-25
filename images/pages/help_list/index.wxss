@@ -1,0 +1,12 @@
+/* pages/help_list/index.wxss */
+.help_center{
+  font-size:30rpx;
+  font-family:Hiragino Sans GB;
+  font-weight:normal;
+  color:rgba(34,34,34,1);
+  padding: 20rpx 31rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin: 2rpx 0;
+}

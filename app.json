@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/sqdl/index",
+    "pages/setting/index",
+    "pages/charge/index",
+    "pages/win/index",
+    "pages/yemx/index",
+    "pages/wddd/index",
+    "pages/myComments/index",
+    "pages/grxx/index",
+    "pages/spxq/index",
+    "pages/tjdd/index",
+    "pages/ddxq/index",
+    "pages/fbpl/index",
+    "pages/qrzf/index",
+    "pages/zfmmSetting/index",
+    "pages/yzm/index",
+    "pages/setpay/index",
+    "pages/yjfk/index",
+    "pages/help_list/index",
+    "pages/problem/index",
+    "pages/yuyue/index",
+    "pages/reservation/index",
+    "pages/yyxq/index",
+    "pages/extraPage/index",
+    "pages/InviteFriends/index",
+    "pages/yejlxq/index",
+    "pages/yysuccess/index",
+    "pages/paysuccess/index",
+    "pages/friendsShare/index",
+    "pages/payYuYue/index",
+    "pages/waiter/clientOrder/clientOrder",
+    "pages/waiter/filterOrder/filterOrder",
+    "pages/waiter/qrcode/qrcode",
+    "pages/shoukuan/index",
+    "pages/fkjl/index",
+    "pages/fkxq/fkxq",
+    "pages/czjl/czjl"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

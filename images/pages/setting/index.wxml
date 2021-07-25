@@ -1,0 +1,71 @@
+
+<scroll-view scroll-y class="scrollPage">
+  <view style="position: relative;z-index: 1;height:400rpx;">
+    <image src='/images/icon_mybj.png' class='png' style='width:100%;height:317rpx'></image>
+    <view class="flex flex-direction justify-center align-center" style="position: absolute;z-index: 2;top:250rpx;left:30%;right:30%;">
+      <block wx:if="{{login}}">
+        <view class="flex justify-center" >
+          <image src="{{userInfo.photo}}" class='png' style="width: 112rpx;height: 112rpx;border-radius: 50%;" bindtap="grxx"></image>
+        </view>
+        <text class="text-center" style="color:#222222;font-size:18px;font-family:PingFang SC;font-weight:bold;" bindtap="grxx">{{userInfo.name}}</text>
+        <view class="text-center" style="color:#999999;font-size:12px;font-family:DINNextLTPro;font-weight:500;" bindtap="grxx">{{userInfo.phone}}</view>
+      </block>
+      <block wx:if="{{!login}}">
+      <view class="flex justify-center" catchtap="login">
+          <image src="/images/icon_tx.png" class='png' style="width: 112rpx;height: 112rpx;border-radius: 50%;" ></image>
+      </view>
+       <text catchtap="login" class="text-center;" style="color:#333333;font-size:18px;font-family:PingFang SC;font-weight:bold;">点击登录</text>
+        <!-- <text class="text-center" style="width:150rpx;height:50rpx;line-height: 50rpx;border:1px solid #333333;border-radius:50rpx;font-size:30rpx;color:#333333;" bindtap="login">登录</text> -->
+      </block>
+    </view>
+  </view>
+  <view class="padding radius shadow-warp bg-white card flex flex-direction justify-between margin-top" style="font-size:26rpx;margin-top:30px;">
+    <view class="flex justify-between">
+      <view>账户余额（元）</view>
+      <view bindtap="yemx">余额记录>></view>
+    </view>
+    <view class="flex justify-between">
+      <view style="font-size:50rpx;color:#333333;">{{userInfo.cash}}</view>
+      <text class="text-center" style="width:150rpx;height:50rpx;line-height: 50rpx;border:1px solid #333333;border-radius:50rpx;font-size:30rpx;color:#333333;" bindtap="charge">充值</text>
+    </view>
+  </view>
+  <view class="cu-list menu sm-border margin-top ">
+    <view class="cu-item arrow" bindtap="wddd">
+      <view class="content">
+        <image src="/images/icon_wddd.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">我的订单</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="wdyy">
+      <view class="content">
+        <image src="/images/yuyue.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">我的预约</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="wdpj">
+      <view class="content">
+        <image src="/images/icon_wdpj.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">我的评价</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="yjfk">
+      <view class="content">
+        <image src="/images/icon_yjfk.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">意见反馈</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="cjwt">
+      <view class="content">
+        <image src="/images/icon_cjwt.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">常见问题</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="bzzx">
+
+      <view class="content">
+        <image src="/images/icon_bzzx.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">帮助中心</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

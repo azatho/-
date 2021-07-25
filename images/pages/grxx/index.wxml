@@ -1,0 +1,27 @@
+
+<view class="flex justify-between align-center solids-bottom bg-white padding-lr margin-top-sm" style="height:100rpx;">
+  <text>头像</text>
+  <image src="{{photo}}" style="width:80rpx;height:80rpx;" mode="aspectFit"></image>
+</view>
+<view class="flex justify-between align-center solids-bottom bg-white padding-lr " style="height:100rpx;">
+  <text>昵称</text>
+  <view>{{user_name}}
+    <text class="cuIcon-right lg text-gray"> </text>
+  </view>
+</view>
+<view class="flex justify-between align-center solids-bottom bg-white padding-lr" style="height:100rpx;"
+bindtap="paypsd">
+  <text>支付密码</text>
+  <view>
+    <text class="cuIcon-right lg text-gray"> </text>
+  </view>
+</view>
+<view class="flex justify-between align-center solids-bottom bg-white padding-lr margin-top-sm" style="height:100rpx;">
+  <text>关于我们</text>
+  <view>
+    <text class="cuIcon-right lg text-gray"> </text>
+  </view>
+</view>
+<view class="margin-lr margin-top-xl bg-yellow text-center text" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx" bindtap="outlogin">
+退出
+</view>

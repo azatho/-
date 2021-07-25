@@ -1,0 +1,29 @@
+<!--pages/index/clientOrder/clientOrder.wxml-->
+<view class="top">
+<view class="topBtn">立即结账</view>
+</view>
+<view class="content">
+	<view class="content-item" wx:for='{{list}}'>
+		<view class="ctop">
+			<view class="ctop-left ">2019-10-10</view>
+			<view class="ctop-right">待支付</view>
+		</view>
+
+		<view class="cmid ">
+			<view class="left">购买商品：</view>
+
+			<view class="mid">
+				<view class="pic" wx:for='{{list}}' wx:for-item="{{item}}"></view>
+			</view>
+
+			<view class="right">
+				<view class="dot" wx:for='{{3}}'></view>
+			</view>
+		</view>
+
+		<view class="cbtm ">
+    <view>订单总价：206.00</view>
+    <view class="btn">收款</view>
+    </view>
+	</view>
+</view>

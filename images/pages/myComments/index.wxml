@@ -1,0 +1,23 @@
+<!-- <empty-layout bindemptyevent="emptyCallback" emptyType="{{emptyType}}" loadingTransparent="{{loadingTransparent}}"> -->
+<view style="text-align: center;margin-top:20rpx;" wx:if='{{!list3.length}}'>暂无评论数据</view>
+  <view class="i_pjlb bg-white" wx:if='{{list3.length}}'>
+    <view class="i_pjlb_item" wx:for="{{list3}}" wx:key='item' bindtap='xqSelect' data-id='{{index}}'>
+      <view class="i_pjlb_item_head">
+        <image class="i_img" src="{{item.icon}}" style="width: 60rpx;height: 60rpx;border-radius: 50%;"></image>
+        <view class="i_pjlb_item_head_content">
+          <view>{{item.comment_nick}}</view>
+          <view class="rate">
+            <rate bind:getscoreI="getscoreI" starSize="small" score="{{item.comment_score}}" gradable="{{gradable}}"></rate>
+          </view>
+        </view>
+        <view>2018-06-02</view>
+      </view>
+      <view class="i_pjlb_item_text">{{item.comment_content}}</view>
+      <view class="i_pjlb_item_img">
+        <view class="img_item" wx:for="{{item.comment_images}}" wx:key bindtap='imgSelect' data-id='{{index}}'>
+          <image style="width: 130rpx;height: 130rpx;" src="{{list3[index]}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- </empty-layout> -->

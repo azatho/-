@@ -1,0 +1,7 @@
+<view class="flex flex-direction padding justify-center ">
+  <view class="flex justify-center" style="margin-top:100rpx;">
+    <image style="width:128rpx;height:134rpx;" src="../../images/select_icon.png"> </image>
+  </view>
+  <text class="text-center text-black" style="margin-top:30rpx;font-size:36rpx;">充值成功</text>
+  <button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:80rpx" bindtap="sub"> 完成</button>
+</view>

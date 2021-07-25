@@ -1,0 +1,16 @@
+<view>
+  <view wx:if="{{!infoList.length}}">
+   <image src="{{cdn}}/store/icon/nodata.png" style="width: 480rpx;height: 360rpx;margin-top: 200rpx;"></image>
+  </view>
+  <view wx:for='{{infoList}}'  wx:for-item="item" wx:key='index'>
+    <view class="item">
+      <view class="head" style="display: flex;justify-content: space-between;"><span>{{item.feedback_addtime}}</span><span class="{{item.status==1?'colorRed':'colorBlue'}}">{{item.status==1?'未回复':'已回复'}}</span></view>
+      <view class="content">反馈内容:
+        <span style="color: black;">
+        {{item.feedback_content}}
+        </span>
+      </view>
+      <view class="bottom" bindtap='goFeedbackDetails' data-item="{{item}}">查看详情>></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/yysuccess/index.wxml-->
+<view class="flex flex-direction padding justify-center ">
+  <view class="flex justify-center" style="margin-top:100rpx;">
+    <image style="width:128rpx;height:128rpx;" src="../../images/select_icon.png"> </image>
+  </view>
+  <text class="text-center text-black" style="margin-top:30rpx;font-size:36rpx;">预约成功</text>
+  <button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:80rpx" bindtap="look_yuyu"> 查看预约</button>
+  <button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;margin-top:20rpx" open-type='share'> 发送好友邀请函</button>
+  <button class="cu-btn block margin lg" style="height:90rpx;background:rgba(255,255,255,1);border:1px solid rgba(255,180,0,1);line-height:90rpx;color:hsla(42, 100%, 50%, 1);font-size:36rpx;border-radius:90rpx;margin-top:20rpx" bindtap="yySuccess"> 完成</button>
+</view>

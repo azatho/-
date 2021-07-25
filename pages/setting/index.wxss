@@ -1,0 +1,18 @@
+page {
+  background: white;
+}
+
+.card {
+  height: 130rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+
+}
+
+.assistant {
+  padding: 20rpx 35rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333;
+}

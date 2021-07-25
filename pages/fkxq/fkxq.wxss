@@ -1,0 +1,8 @@
+/* pages/fkxq/fkxq.wxss */
+page{
+background-color: white;  
+}
+.txt{
+  height: 70rpx;
+  line-height: 70rpx;
+}

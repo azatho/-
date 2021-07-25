@@ -1,0 +1,45 @@
+<!--pages/InviteFriends/index.wxml-->
+<view  style="padding-bottom: 30rpx;background: url(https://cdn.jianyunkeji.cn/store/img/juanzhou.png) no-repeat top center;background-size: 100% 100%;">
+  <view class="dianpumsg">
+    <image src="{{cdn+dataList.mer_logo}}" class="txmsg"></image>
+    <view class="dianpuName">{{dataList.merchant_name}}</view>
+    <image src="https://cdn.jianyunkeji.cn/store/img/share1.png" class="imgMsg"></image>
+  </view>
+  <view class="xian"></view>
+  <view class="yuyueMsg" style="background: url(https://cdn.jianyunkeji.cn/store/img/tuoyuan1.png) no-repeat top center;background-size: 100% 100%;">
+    <view class="detailMsg">
+      <view class="leftMsg">预约项</view>
+      <view class="rightMsg">{{dataList.subscribe_time}}</view>
+    </view>
+    <view class="detailMsg">
+      <view class="leftMsg">预约时间</view>
+      <view class="rightMsg">{{dataList.subscribe_datetime}}</view>
+    </view>
+    <view class="detailMsg">
+      <view class="leftMsg">桌台信息</view>
+      <view class="rightMsg">{{dataList.subscribe_info.region_name}}</view>
+    </view>
+    <view class="detailMsg">
+      <view class="leftMsg">店铺电话</view>
+      <view class="rightMsg">{{dataList.subscribe_phone}}</view>
+    </view>
+    <view class="detailMsg">
+      <view class="leftMsg">地址信息</view>
+      <view class="addressMsg">
+        <view class="rightMsg rightMsg1">{{dataList.merchant_address}}</view>
+        <view class="shuxian"></view>
+        <view class="daohang" bindtap="goAddress">
+          <image src="/images/icon_dt.png" class="daohangImg"></image>
+          <view style="font-size: 18rpx;font-weight:300;color:rgba(51,51,51,1);">导航</view>
+        </view>
+      </view>
+    </view> 
+  </view>
+  <!-- <view class="save" bindtap="saveImageToPhotosAlbum">保存到相册</view> -->
+</view>
+<!-- <canvas class='pic' canvas-id='pic' bindlongpress='savePic'></canvas> -->
+<!-- <cover-view class='jilu'> -->
+
+  <!-- <cover-image src="{{imgurl}}m_jilu.png"></cover-image> -->
+<!-- </cover-view> -->
+

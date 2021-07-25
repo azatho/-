@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "rate": "../../components/rate/index",
+    "empty-layout": "../../components/empty/empty"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "我的评论"
+}

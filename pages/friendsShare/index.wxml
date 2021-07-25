@@ -1,0 +1,45 @@
+<!--pages/friendsShare/index.wxml-->
+<view id="pay_order">
+  <view class="pay_order_title">
+    <view style="width:353rpx">我在{{user.merchant_name}}正在消费，是时候该你 仗义疏财啦，快帮我付个款吧~ </view>
+  </view>
+  <view class="pay_amount">
+    <view class="pay_amount_title">
+      <view>代付金额：</view>
+      <view>请求人：{{user.user_name}}</view>
+    </view>
+    <view class="pay_amount_title">
+      <view style="color:red;font-size:44rpx;">￥{{user.money/100?user.money/100:0}}</view>
+      <view>剩余支付时间：
+        <text>{{h}}:</text>
+        <text>{{m}}:</text>
+        <text>{{s}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="pay_amount_instructions">
+    <view class="pay_amount_instructions_say">
+      付款说明：
+    </view>
+    <view class="pay_amount_instructions_content">
+      <view>
+        1.付款前务必与好友再次确认，避免是诈骗行为。
+      </view>
+      <view>
+        2.如果发生退款，钱将退还到您的微信账户里。
+      </view>
+    </view>
+  </view>
+  <view style="height:100rpx"></view>
+  <mp-dialog title="选择支付方式" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+    <radio-group bindchange="radioChange">
+      <label class="weui-cell weui-check__label" style="margin:5rpx" wx:for="{{items}}" wx:key="{{item.value}}">
+        <view class="weui-cell__hd">
+          <radio value="{{item.value}}"  color="white"  checked="{{item.checked}}" disabled="{{money==0&&item.value=='0'?true:false}}"/><text style="margin-left:10rpx;">{{item.name}}</text>
+        </view>
+        <view  style="margin-left:60rpx;" wx:if="{{item.value=='0'}}">我的余额￥{{money/100?money/100:0}}</view>
+      </label>
+    </radio-group>
+  </mp-dialog>
+  <button class="cu-btn block margin lg" style="height:90rpx;background:#FFB400;border:1px solid rgba(255,180,0,1);line-height:90rpx;color:#333;font-size:36rpx;border-radius:90rpx;margin-top:20rpx" bindtap="pay_immediately">立即支付</button>
+</view>

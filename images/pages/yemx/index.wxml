@@ -1,0 +1,16 @@
+<empty-layout bindemptyevent="emptyCallback" emptyType="{{emptyType}}" loadingTransparent="{{loadingTransparent}}">
+  <view class="flex flex-direction">
+    <block wx:for="{{datainfo}}" wx:for-item="item" wx:key>
+      <view class="padding  bg-white  flex flex-direction justify-between solids-bottom" data-id='{{index}}' style="height:140rpx;">
+        <view class="flex justify-between text-black" style="font-size:30rpx;">
+          <view>{{item.msg}}</view>
+          <view>+{{item.amount}}</view>
+        </view>
+        <view class="flex justify-between text-grey " style="font-size:22rpx;">
+          <view>余额：{{item.amount}}</view>
+          <view>2018-01-03 12:00:00</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</empty-layout>

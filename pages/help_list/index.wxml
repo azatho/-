@@ -1,0 +1,14 @@
+<!--pages/help_list/index.wxml-->
+<view wx:if="{{!help_list.length}}" class="none">
+   <image src="{{cdn}}/store/icon/nodata.png" style="width: 480rpx;height: 360rpx;margin-top: 200rpx;"></image>
+</view>
+<view class="common" wx:for="{{help_list}}" wx:key>
+   <view class="problem" bindtap='click_active' data-index="{{item}}">
+      <view style="display: flex;align-items: center;">
+         <view class="problem_title">
+            {{item.title}}
+         </view>
+      </view>
+      <mp-icon icon="arrow"  size="{{12}}"></mp-icon>
+   </view>
+</view>

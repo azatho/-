@@ -1,0 +1,69 @@
+<!--pages/yuyue/index.wxml-->
+<view class="my_yuyue">
+  <view class="yuyue_list">
+      <view class="yuyue_title">
+          <view class="yuyue_title_left">
+              <text decode="{{true}}" class="yuyue_title_lxr">联&nbsp;&nbsp;系&nbsp;&nbsp;&nbsp;人：张先生</text>
+              <view class="yuyue_title_lxr">联系方式：17719113995</view>
+          </view>
+          <view class="yuyue_title_right">
+              待赴约
+          </view>
+      </view>
+      <view class="yuyue_content">
+          <view class="yuyue_content_list">
+              <text decode="{{true}}">预&nbsp;&nbsp;约&nbsp;码：</text>
+              <view class="yuyuema">
+                  2256522565225652256522565225652256522565225652256522565225652256522565
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+            <text decode="{{true}}">预约日期：</text>
+              <view>
+                  12-19
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>预约时间：</text>
+              <view>
+                  晚餐（17：00-21：00）
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>桌台信息：</text>
+              <view>
+                  大厅 A01 4-6人桌 圆桌
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text decode="{{true}}">套&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;餐：</text>
+              <view>
+                  年夜饭 ￥368.00
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text decode="{{true}}">保&nbsp;&nbsp;证&nbsp;&nbsp;金：</text>
+              <view>
+                  ￥20.00
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>用餐人数：</text>
+              <view>
+                  4人
+              </view>
+          </view>
+          <view class="yuyue_content_list">
+              <text>提交时间：</text>
+              <view>
+                  2019-12-19 21：13
+              </view>
+          </view>
+      </view>
+      <view class="yuyuefoot">
+         <view class="yy_bg">我已经到店</view>
+         <view class="yy_bg">邀请好友</view>
+         <view bindtap='qxyy'>取消预约</view>
+      </view>
+  </view>
+</view>

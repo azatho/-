@@ -1,0 +1,46 @@
+/* pages/problem/index.wxss */
+.none{
+  text-align: center;
+  margin-top: 50rpx;
+}
+.problem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  background: #fff;
+}
+
+.problem_title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin: 0 10rpx;
+}
+
+.problem_list {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding: 0 10rpx;
+  background: #fff;
+  font-size: 13px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  box-sizing: border-box;
+}
+
+.active {
+   height: auto;
+   white-space:pre-wrap;
+   margin: 0 auto;
+}
+.jt1{
+  transform: rotate(0deg);
+  transition: all .5s;
+}
+.jt2{
+  transform: rotate(-90deg);
+}

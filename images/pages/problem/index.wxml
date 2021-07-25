@@ -1,0 +1,19 @@
+<!--pages/problem/index.wxml-->
+<view class="common" bindtap='click_active' data-index="{{index}}" wx:for='1'>
+   <view class="problem">
+      <view style="display: flex;align-items: center;">
+       <view class="problem_suoyin" style="display:flex;width: 34rpx;height: 33rpx;color:#fff;background:url('../../images/suoyin.png')no-repeat top center;background-size:100% 100%;text-align:center;;">
+          <!-- <image src='../../images/suoyin.png' style="width: 100%;height:100%;position: absolute;left:0;z-index:1" mode="aspectFit"></image> -->
+         <text style="z-index:100;">{{index+1}}</text>
+       </view>
+       <view class="problem_title">
+          第一条常见问题
+       </view>
+      </view>
+       <mp-icon icon="arrow"  size="{{12}}" class="jt1 {{index === suoyin?'jt2':''}}"></mp-icon>
+    </view>
+   <view class="problem_list {{index === suoyin?'active':''}}">
+      <textarea  auto-height='true' maxlength='-1' disabled value='聚焦优能力和竞争优势，为冶金工业和相关产业提供资源、科技、工程、装备集成服务的国际化企业集团。'>
+      </textarea>  
+   </view> 
+</view>

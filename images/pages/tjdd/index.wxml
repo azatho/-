@@ -1,0 +1,57 @@
+<view style="flex:1;height: 100px;">
+  <scroll-view scroll-y="true" style="height:100%">
+    <view class="cu-form-group margin-tb-sm ">
+      <view class="title">预计到店时间</view>
+      <picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+        <view class="picker">
+          {{multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]]}}
+        </view>
+      </picker>
+    </view>
+    <view class="flex flex-direction bg-white">
+      <block wx:for="{{10}}" wx:key>
+        <view class="flex padding">
+          <image style="width:116rpx;height:116rpx;border-radius:10rpx;border:2rpx solid #FFB400;"></image>
+          <view class="flex-noe flex flex-direction justify-between padding-left">
+            <view class="flex justify-between">
+              <text style="color:#222222;font-size:30rpx">特色花甲</text>
+              <text style="color:#999999;font-size:26rpx">X2</text>
+            </view>
+            <view style="color:#D80F0F;font-size:30rpx">￥200</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <form>
+      <view class="cu-form-group">
+        <view class="title">口味选择</view>
+        <picker bindchange="PickerChange2" value="{{index2}}" range="{{picker2}}">
+          <view class="picker">
+            {{picker2[index2]}}
+          </view>
+        </picker>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">餐具数量</view>
+        <picker bindchange="PickerChange3" value="{{index3}}" range="{{picker3}}">
+          <view class="picker">
+            {{picker3[index3]}}
+          </view>
+        </picker>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">是否打包</view>
+        <checkbox class="round yellow" checked="false"></checkbox>
+      </view>
+      <view class="cu-form-group margin-bottom-xl flex-direction align-start">
+        <view class="title">备注</view>
+        <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请填写备注信息"></textarea>
+      </view>
+    </form>
+  </scroll-view>
+</view>
+<view class="flex" style="height:100rpx;">
+  <text class="basis-lg bg-black padding-left" style=" line-height:100rpx;font-size:36rpx;">合计：0.00</text>
+  <text class="bg-yellow basis-sm text-center" style=" line-height:100rpx;font-size:36rpx;" bindtap="sub">提交订单</text>
+</view>

@@ -1,0 +1,113 @@
+/* pages/yyxq/index.wxss */
+.my_yuyue {
+  padding: 0 20rpx;
+}
+
+.yuyue_list {
+  margin-top: 105rpx;
+  padding: 0 0 30rpx 0;
+  background: #fff;
+}
+
+.yuyue_title{
+  height:145rpx;
+  position: relative;
+}
+.touxiang{
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform:translateX(-50%);
+  text-align: center;
+}
+.touxiang image{
+  width: 145rpx;
+  height:145rpx;
+  border-radius:10rpx;
+  margin-bottom: 10rpx;
+}
+.yuyue_content_list {
+  display: flex;
+  margin: 30rpx 0;
+  align-items: flex-start;
+  padding: 0 20rpx;
+}
+.yuyuemsg{
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.yuyuexinxi{
+  font-size:22rpx;
+  font-weight:300;
+  color:rgba(153,153,153,1);
+}
+.xian{
+  height: 1rpx;
+  width: 270rpx;
+  background-color: #ccc;
+}
+.yuyue_content_list text {
+  color: rgba(51, 51, 51, 1);
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  margin: 0;
+}
+
+.yuyue_content_list view {
+  flex: 1;
+  color: rgba(51, 51, 51, 1);
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.yuyue_content_list .yuyuema {
+  color: rgba(255, 180, 0, 1);
+}
+.qx{
+  width: 100%;
+  text-align: center;
+  margin: 30rpx 0;
+}
+.yuyuefoot {
+  height: 70rpx;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}
+
+.yuyuefoot .yy_bg{
+  width: 220rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  border: 1px solid rgba(255, 180, 0, 1);
+  float: right;
+  margin: 0 22rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  background: rgba(255, 180, 0, 1);
+  color: rgba(51, 51, 51, 1);
+}
+.yuyuefoot .yyqx {
+  color: rgba(255, 180, 0, 1);
+  background-color: #fff;
+}
+.yuyuefoot .yyqx1 {
+  border:none;
+  color:#999999;
+  background-color: #DDDDDD;
+}
+.yy_btn{
+  border: none;
+  padding: 0;
+}

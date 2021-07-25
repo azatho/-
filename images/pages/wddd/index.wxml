@@ -1,0 +1,29 @@
+<view wx:if="{{!OrderList.length}}" style="text-align: center;margin-top: 20rpx;">暂无订单数据</view>
+<view class="flex flex-direction" wx:if='{{OrderList.length}}'>
+  <block wx:for="{{OrderList}}" wx:for-item="item" wx:key>
+    <view class="padding-sm margin-top margin-lr bg-white  flex flex-direction justify-between" data-id='{{item.mer_order_index}}' style="height:323rpx;background:rgba(255,255,255,1);border-radius:15px;" catchtap="ddxq">
+      <view class="flex justify-between text-black " style="font-size:30rpx;">
+        <view>{{item.mer_order_time}}</view>
+        <view wx:if="{{item.mer_status == '-1'}}" style="color:#FE2515;">订单取消</view>
+        <view wx:if="{{item.mer_status == '0'}}" style="color:#FE2515;">待支付</view>
+        <view wx:if="{{item.mer_status == '1'}}" style="color:#FE2515;">待出餐</view>
+        <view wx:if="{{item.mer_status == '2'}}" style="color:#FE2515;">已出餐</view>
+        <view wx:if="{{item.mer_status == '3'}}" style="color:#FE2515;">完成</view>
+      </view>
+      <view class="flex">
+      <view class="flex justify-center align-center">购买商品：</view>
+        <block wx:for="{{item.dishes}}" wx:for-item="dishes" wx:key >
+           <view class="margin-left" >
+           <image wx:if="{{index<4}}" style="width:80rpx;height:80rpx;border-radius:4px;margin-left:20rpx" src="{{cdn+dishes.dishes_url}}"></image>
+           </view>
+        </block>
+      </view>
+      <view class="flex justify-between text-grey " style="font-size:22rpx;">
+        <view class="flex justify-center align-center" style="color:#FE2515;font-size:26rpx;">总价：￥{{item.mer_order_price/100}}</view>
+        <text wx:if="{{item.mer_status == '0'}}" class="text-center" style="width:135rpx;height:50rpx;line-height: 50rpx;border:1px solid #FFB400;border-radius:50rpx;font-size:24rpx;color:#FFB400;" catchtap="charge" data-item="item">去支付</text>
+         <text wx:if="{{item.mer_status == '1'}}" class="text-center" style="width:135rpx;height:50rpx;line-height: 50rpx;border:1px solid #FFB400;border-radius:50rpx;font-size:24rpx;color:#FFB400;" catchtap="charge" data-item="item">立即出餐</text>
+          <text wx:if="{{item.mer_status == '3'}}" class="text-center" style="width:135rpx;height:50rpx;line-height: 50rpx;border:1px solid #FFB400;border-radius:50rpx;font-size:24rpx;color:#FFB400;" catchtap="charge" data-item="item">去评价</text>
+      </view>
+    </view>
+  </block>
+</view>

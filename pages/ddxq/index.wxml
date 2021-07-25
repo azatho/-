@@ -1,0 +1,97 @@
+<view class="flex bg-yellow" style="height:80rpx;">
+  <text class="padding-left" style="line-height:80rpx;font-size:36rpx;">
+  <block wx:if="{{OrderInfo.mer_status=='-1'}}">已取消</block>
+  <block wx:if="{{OrderInfo.mer_status=='0'}}">待支付</block>
+  <block wx:if="{{OrderInfo.mer_status=='1'}}">待出餐</block>
+  <block wx:if="{{OrderInfo.mer_status=='2'}}">已出餐</block>
+  <block wx:if="{{OrderInfo.mer_status=='3'}}">已出餐</block>
+  <block wx:if="{{OrderInfo.mer_status=='4'}}">已完成</block>
+  </text>
+</view>
+<view style="flex:1;height: 100px;">
+  <scroll-view scroll-y="true" style="height:100%">
+    <view class="cu-form-group margin-top-sm" >
+      <view class="title">取餐码：{{OrderInfo.meal_code}}</view>
+      <!-- <text class="cuIcon-phone lg text-black"></text>-->
+    </view> 
+    <view class="flex flex-direction bg-white">
+      <block wx:for="{{OrderList}}" wx:key wx:for-item="item">
+        <view class="flex padding">
+          <image style="width:116rpx;height:116rpx;border-radius:10rpx;" src="{{cdn+item.dishes_url}}"></image>
+          <view class="flex-noe flex flex-direction justify-between padding-left">
+            <view class="flex justify-between">
+              <text style="color:#222222;font-size:30rpx">{{item.dishes_name}}</text>
+              <text style="color:#999999;font-size:26rpx">X{{item.dishes_count}}</text>
+            </view>
+            <view style="color:#D80F0F;font-size:30rpx">￥{{item.dishes_price/100}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <form>
+      <view class="cu-form-group margin-top-sm">
+        <view class="title">是否打包</view>
+        <view class="title">{{OrderInfo.is_bale=='0'?'否':'是'}}</view>
+      </view>
+      <view class="cu-form-group ">
+         <view class="title">用餐人数</view>
+        <view class="title">{{OrderInfo.dining}}</view>
+      </view>
+       <view class="cu-form-group">
+        <view class="title">稍后出餐</view>
+        <view class="title">{{OrderInfo.eat_later=='0'?'否':'是'}}</view>
+      </view>
+      <view class="cu-form-group margin-top-sm" wx:if="{{OrderInfo.man_cash!='0'}}">
+        <view class="title">满减优惠</view>
+        <view class="title">-￥{{OrderInfo.man_cash/100}}</view>
+      </view>
+       <view class="cu-form-group " wx:if="{{OrderInfo.first_cash!='0'}}">
+        <view class="title">首单优惠</view>
+        <view class="title">-￥{{OrderInfo.first_cash/100}}</view>
+      </view>
+      <view class="cu-form-group " wx:if="{{OrderInfo.rank_cash!='0'}}">
+        <view class="title">会员优惠</view>
+        <view class="title">-￥{{OrderInfo.rank_cash/100}}</view>
+      </view>
+      <view class="cu-form-group  flex-direction align-start padding-bottom">
+        <view class="title">备注</view>
+        <view class="title">{{OrderInfo.remark!=''?OrderInfo.remark:'没有填写备注'}}</view>
+      </view>
+       <view class="cu-form-group margin-top-sm">
+        <view class="title">订单信息</view>
+      </view>
+       <view class="cu-form-group ">
+        <view class="title">订单编号</view>
+        <view class="title">{{OrderInfo.mer_order_id}}</view>
+      </view>
+       <view class="cu-form-group ">
+        <view class="title">下单时间</view>
+        <view class="title">{{OrderInfo.mer_order_time}}</view>
+      </view>
+       <view class="cu-form-group " wx:if="{{OrderInfo.mer_payment_time!='0'}}">
+        <view class="title">付款时间</view>
+        <view class="title">{{OrderInfo.mer_payment_time}}</view>
+      </view>
+       <view class="cu-form-group " wx:if="{{OrderInfo.out_meal_time!='0'}}">
+        <view class="title">出餐时间</view>
+        <view class="title">{{OrderInfo.out_meal_time}}</view>
+      </view>
+       <view class="cu-form-group " wx:if="{{OrderInfo.complete_time!='0'}}">
+        <view class="title">完成时间</view>
+        <view class="title">{{OrderInfo.complete_time}}</view>
+      </view>
+         <view class="cu-form-group" >
+        <view class="title" style="margin-left:300rpx">已优惠￥{{(OrderInfo.mer_order_price)/100}}</view>
+        <view class="flex">
+         <view class="title ">合计</view>
+         <view class="title text-red " style="font-size:36rpx">￥{{(OrderInfo.total_price-OrderInfo.mer_order_price)/100}}</view>
+        </view>
+      </view>
+    </form>
+  </scroll-view>
+</view>
+<view class="flex bg-white justify-end align-center" style="height:100rpx;padding-right: 30rpx;">
+      <button class="cu-btn round bg-yellow" wx:if="{{state==0}}" catchtap="go_pay" data-item="{{OrderInfo}}">立即支付</button>
+      <button class="cu-btn round bg-yellow" wx:if="{{state==1}}" catchtap="go_meal" data-item="{{OrderInfo}}">立即出餐</button>
+      <button class="cu-btn round bg-yellow" wx:if="{{state==3}}" catchtap="evaluation">去评价</button>
+</view>

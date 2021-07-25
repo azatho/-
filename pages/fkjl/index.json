@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "反馈记录",
+  "usingComponents": {
+  "rate": "/components/rate/index"
+}
+}

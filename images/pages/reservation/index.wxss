@@ -1,0 +1,171 @@
+/* pages/reservation/index.wxss */
+page {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.reservation {
+  width: 100%;
+  height: 1350rpx;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 132rpx;
+}
+
+.store_logo {
+  width: 145rpx;
+  height: 145rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 68rpx;
+}
+
+.store_logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.reservation_title {
+  text-align: center;
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-top: 100rpx;
+}
+.Booking_information{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.Booking_information view:nth-child(1){
+  height:2px;
+  background:rgba(245,245,245,1);
+  flex: 1;
+  margin-right: 10rpx;
+}
+.Booking_information view:nth-child(3){
+  height:2px;
+  background:rgba(245,245,245,1);
+  flex: 1;
+  margin-left: 10rpx;
+}
+.picker{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  align-items: center;
+}
+.picker view:nth-child(1){
+  display: flex;
+  align-items: center;
+  color:rgba(51,51,51,1);
+}
+.picker view:nth-child(2){
+  display: flex;
+  align-items: center;
+  color:rgba(51,51,51,1);
+}
+.prop_date{
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background:rgba(0, 0, 0, .5);
+}
+.prop_date_footer{
+  width: 100%;
+  height: 800rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius:30rpx 30rpx 0rpx 0rpx;
+}
+.prop_date_footer_title_top{
+  width: 100%;
+  border-bottom: 2rpx solid #f5f5f5;
+  text-align: center;
+  line-height: 90rpx;
+  color: #333333;
+  font-size: 26rpx;
+}
+.prop_date_footer_title_bottom{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.timer{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-bottom: 20rpx;
+  color: #333333;
+  font-size: 26rpx;
+}
+.prop_date_footer_title_bottom_box{
+  width: 120rpx;
+  height: 140rpx;
+  border: 1rpx solid #CCCCCC;
+  text-align: center;
+  margin: 10rpx;
+  display: inline-block;
+  border-radius: 8rpx;
+}
+.date{
+  color: #333333;
+  font-size: 30rpx;
+  padding-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+.day{
+
+}
+.guanbi{
+  position: absolute;
+  width: 36rpx;
+  height: 36rpx;
+  right: 23rpx;
+  top: 27rpx;
+}
+.prop_date_footer_title_btn {
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  height: 120rpx;
+  border-top: 2rpx solid #f5f5f5;
+}
+.sureBtn {
+  margin-top: 24rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius:30px 30px;
+  background-color: #FFB400;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.prop_date_footer_title_bottom_foot {
+  width: 190rpx;
+  height: 100rpx;
+  border: 1rpx solid #CCCCCC;
+  text-align: center;
+  margin: 10rpx;
+  display: inline-block;
+  border-radius: 8rpx;
+}
+.food {
+  color: #333333;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.stive {
+  /* color: #FFB400; */
+  border: 1rpx solid #FFB400;
+  background-color: #FFF2D3;
+}
+.fontColor {
+  color: #FFB400;
+}

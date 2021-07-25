@@ -1,0 +1,16 @@
+page{
+  background: white;
+}
+.items{
+width:216rpx;
+height:113rpx;
+background:rgba(255,198,0,1);
+border-radius:10rpx;
+}
+.item{
+width:216rpx;
+height:113rpx;
+background:rgba(255,255,255,1);
+border:1px solid rgba(255,198,0,1);
+border-radius:10rpx;
+}

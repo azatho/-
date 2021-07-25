@@ -1,0 +1,33 @@
+.add_sub {
+  display: flex;
+  width: 150rpx;
+  font-size: 30rpx;
+  color: black;
+}
+
+.sub {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 35rpx;
+  background: #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 35rpx;
+  background: #ffb400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

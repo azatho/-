@@ -1,0 +1,51 @@
+<view class="flex flex-direction" style="width:100%;height:100%;">
+
+  <view class="flex flex-direction padding-lr bg-white padding-tb-sm ">
+    <image style="height:387rpx;width:100%;border-radius:20rpx;border: 2rpx solid yellow;"></image>
+    <view style="font-size:36rpx;color:#222222;margin-top:20rpx">北京烤鸭</view>
+    <view style="font-size:24rpx;color:#999999;margin-top:20rpx">月售90</view>
+    <view class="flex justify-between margin-top-sm">
+      <text style="font-size:36rpx;color:#D80F0F;">￥20</text>
+      <view style="width: 35rpx;height: 35rpx;border-radius: 35rpx;background: #ffb400;display: flex;align-items: center;justify-content: center;" bindtap="add">
+        <text>+</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex-sub flex flex-direction padding-lr bg-white padding-tb-sm margin-top-sm">
+    <view style="font-size:36rpx;color:#222222;margin-top:20rpx">商品描述</view>
+    <view style="font-size:24rpx;color:#222222;margin-top:20rpx">半套烤鸭哈，10张饼，一份酱料，一份葱丝，多了没有</view>
+  </view>
+</view>
+<!-- 商品规格选择弹出框 -->
+<view class="cu-modal bottom-modal {{modal=='Modal'?'show':''}}" catchtouchmove="{{modal=='Modal'?'true':'false'}}">
+  <view class="cu-dialog">
+    <view class="flex padding-sm bg-white">
+      <image style="width:150rpx;height:150rpx;border: 2rpx solid #ffb400;margin-right:20rpx;"></image>
+      <view class="flex flex-direction flex-sub" style=" text-align: start;">
+        <view class="flex justify-between">
+          <text class="text-lg text-black">特色花甲</text>
+          <text class="cuIcon-close xl text-gray" bindtap="hideModal"></text>
+        </view>
+        <text class="margin-top-sm text-sm">已选：加辣、加汤</text>
+        <text class="margin-top-sm text-red text-xl">￥20</text>
+      </view>
+    </view>
+    <view class="flex justify-between padding-sm bg-white">
+      <text>数量</text>
+      <addsub bind:submit="submit" number="1" index="{{index}}" size="40"></addsub>
+    </view>
+    <view class="sxlb bg-white">
+      <scroll-view scroll-y="true" style="height: 500rpx;">
+        <view class="item text-left" wx:for="{{goods_sku_property}}" wx:for-item="item" wx:key data-id='{{index}}'>
+          <view class="margin-sm">{{item.sku_name}}</view>
+          <view class="i_pjfl">
+            <view class="i_pjfl_item" wx:for="{{goods_sku_values}}" wx:for-item="itemz" wx:key bindtap='pjflSelect' data-id='{{index}}' wx:if="{{item.sku_index==itemz.sku_parent}}">
+              <view class="padding-lr-xs {{index==pjflcur?'i_pjfl_item_title_s':'i_pjfl_item_title'}}" style="width:auto;">{{itemz.sku_name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="flex align-center justify-center bg-yellow" style="height:100rpx;">确认</view>
+  </view>
+</view>

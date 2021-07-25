@@ -1,0 +1,36 @@
+<!--pages/yjfk/index.wxml-->
+<view class="container" style="background: url('') no-repeat top center;">
+  <image class='background' src="../../images/yjfk.png" mode="aspectFill"></image>
+  <view style="color: white;position: absolute;right: 30rpx;top: 20rpx;" bindtap="goList">反馈记录</view>
+  <view class='bg_center'>
+    <image  src="../../images/bg_center.png" mode="aspectFill"></image>
+     <view class="fk_center">
+       <view class="fk_title">
+          您反馈的是：
+       </view>
+       <view class='fk_list'>
+           <view wx:for='{{fk}}' bindtap="change_fk" data-item="{{index}}">
+              <image src="{{index===suoyin?item.icon2:item.icon}}" style="width: 39rpx;height:39rpx;"></image>
+              <text>{{item.name}}</text>
+           </view>
+       </view> 
+       <!-- 反馈内容 -->
+       <view class="contener">
+           <view class="contener_title">意见反馈：</view>
+           <view style="width:549rpx; height:163rpx;position: relative;margin-top: 10rpx;">
+             <image  src="../../images/region_bg.png" mode="aspectFill" class="region_bg"></image>
+             <textarea bindinput='fk_content' placeholder="我们将不断的改进" name="textarea" maxlength='-1' style="width: 100%;height:100%;color: #969696;font-size:24rpx;font-family:PingFang SC;font-weight:400;padding: 10px;"/>
+           </view>
+       </view>
+       <view class="weui-input">
+          <text>邮箱（选填）：</text>
+          <input bindinput='email' placeholder="以便我们给您回复"/>
+       </view>
+       <view class="weui-input">
+        <text>其他（选填）：</text>
+        <input bindinput='qt' placeholder="如QQ或手机号" type="number"/>
+     </view>
+      <view style="margin-top: 91rpx;"><button bindtap='submit' style="color: #000;background:rgba(255, 198, 0, 1);width:271rpx;height:80rpx;border-radius:40rpx;font-size:30rpx;font-family:PingFang SC;font-weight:500;">提交</button></view>
+     </view>
+  </view>
+</view>

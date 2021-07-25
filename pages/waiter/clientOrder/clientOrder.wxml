@@ -1,0 +1,32 @@
+<!--pages/index/clientOrder/clientOrder.wxml-->
+<view class="top" style="display: flex;justify-content: center;align-items: center;" bindtap="sys">
+	<image src="../../../images/sys.png" style="width: 40rpx;height: 36rpx;"></image>
+	<view style="font-size: 26rpx;font-family: Source Han Sans CN;font-weight: 300;color: #333333;margin: 0 10rpx;">扫桌码筛选订单</view>
+</view>
+<view class="content">
+	<view class="content-item" wx:for='{{list}}' data-id='{{item.mer_order_index}}' catchtap="goOrder">
+		<view class="ctop">
+			<view class="ctop-left ">{{item.mer_order_time}}</view>
+			<view class="ctop-right">{{item.mer_statusName}}</view>
+		</view>
+
+		<view class="cmid ">
+			<view class="left">购买商品：</view>
+
+			<view class="mid">
+				<view class="pic" wx:for='{{item.dishes}}' wx:for-item="itemc">
+                   <image src="{{CDN+itemc.dishes_url}}" style="width: 100%;height: 100%;"></image>
+				</view>
+			</view>
+
+			<view class="right">
+				<view class="dot" wx:for='{{3}}'></view>
+			</view>
+		</view>
+
+	<view class="cbtm">
+		<view>订单总价：{{item.mer_order_price/100}}</view>
+		<view class="btn" catchtap="collection" wx-if="{{item.mer_status==0}}" data-mer_order_index="{{item.mer_order_index}}">收款</view>
+    </view>
+	</view>
+</view>

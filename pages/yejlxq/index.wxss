@@ -1,0 +1,28 @@
+/* pages/yejlxq/index.wxss */
+.jilu{
+  height: 220rpx;
+  text-align: center;
+  margin: 0 30rpx;
+  padding-top: 67rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.money{
+  margin: 0 0 40rpx 0;
+  font-size:60rpx;
+  font-family:Source Han Sans CN;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+}
+.detail{
+  margin: 0 30rpx;
+  padding: 50rpx 0 20rpx;
+}
+.leibie{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.cloBk{
+  color: black;
+}

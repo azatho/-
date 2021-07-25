@@ -1,0 +1,17 @@
+<!-- <empty-layout bindemptyevent="emptyCallback" emptyType="{{emptyType}}" loadingTransparent="{{loadingTransparent}}"> -->
+  <view class="none" wx:if="{{emptyType==0}}">暂无数据</view>
+  <view class="flex flex-direction" wx:else>
+    <block wx:for="{{datainfo}}" wx:for-item="item" wx:key>
+      <view class="padding  bg-white  flex flex-direction justify-between solids-bottom" data-id='{{item.index}}' bindtap="yejl">
+        <view class="flex justify-between text-black" style="font-size:30rpx;">
+          <view style="margin-bottom: 20rpx;color: #000000;">{{item.msg}}</view>
+          <view style="height: 30rpx;line-height: 30rpx;" class="{{item.type>100?'cash_add':'cash_reduce'}}">{{item.type>100?'-'+item.amount/100:'+'+item.amount/100}}</view>
+        </view>
+        <view class="flex justify-between text-grey " style="font-size:22rpx;"> 
+          <view>{{item.time}}</view>
+          <view>余额：{{item.later/100}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+<!-- </empty-layout> -->

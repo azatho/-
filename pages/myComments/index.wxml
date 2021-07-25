@@ -1,0 +1,35 @@
+<!-- <empty-layout bindemptyevent="emptyCallback" emptyType="{{emptyType}}" loadingTransparent="{{loadingTransparent}}"> -->
+<view style="text-align: center;margin-top:20rpx;" wx:if='{{!list3.length}}'>
+  <image src="{{cdn}}/store/icon/nodata.png" style="width: 480rpx;height: 360rpx;margin-top: 200rpx;"></image>
+</view>
+  <view class="i_pjlb " wx:if='{{list3.length}}'>
+    <view class="i_pjlb_item bg-white" wx:for="{{list3}}" wx:key='item' bindtap='xqSelect' data-id='{{index}}' style="padding: 30rpx;margin-bottom: 20rpx;">
+      <view class="i_pjlb_item_head">
+        <image class="i_img" src="{{cdn}}{{item.logo}}" style="width: 60rpx;height: 60rpx;border-radius: 10rpx;"></image>
+        <view class="i_pjlb_item_head_content">
+          <view style="  color:#222222;font-size: 30rpx;margin-bottom: 20rpx;">{{item.merchant_name}}</view>
+         <view style="display: flex;align-items: center;">
+          <view class="rate">
+            <rate bind:getscoreI="getscoreI" starSize="small" score="{{item.comment_score}}" gradable="{{gradable}}"></rate>
+          </view>
+          <view style="margin-left: 20rpx;color:#222222;font-size: 24rpx;">{{item.comment_score==1?'非常差':item.comment_score==2?'差':item.comment_score==3?'一般':item.comment_score==4?'满意':'非常满意'}}</view>
+         </view>
+        </view>
+        <view>{{item.comment_time}}</view>
+      </view>
+      <view class="i_pjlb_item_text" style="margin-top: 10rpx;">{{item.comment_content}}</view>
+      <view class="i_pjlb_item_img">
+        <view class="img_item" wx:for="{{item.comment_images}}" wx:for-item='itemc' wx:key="{{itemc}}" bindtap='imgSelect' data-imgArr="{{item.comment_images}}"  data-item ='{{itemc}}' data-id='{{index}}'>
+          <image style="width: 95rpx;height: 95rpx;" mode='aspectFill'	 src="{{cdn+itemc}}"></image>
+        </view>
+      </view>
+      <view class="i_pjlb_item_text" style="height: 120rpx;background-color: #EFEFEF;display: flex;align-items: center;" bindtap="goOrderInfo" data-comment="{{item.comment_order_id}}">
+        <view style="margin-left: 20rpx;">我的订单:</view>
+        <view wx:for="{{item.dishesOrderList}}" wx:for-item='items' wx:for-index="ids" wx:key='{{ids}}' style="height:80rpx" >
+          <image style="width: 80rpx;height: 80rpx;border-radius: 4rpx;margin-left: 20rpx;" src="{{cdn}}{{items.dishes_url}}"></image>
+        </view>
+      </view>
+      <view class="i_pjlb_item_text" style="margin-top: 20rpx;border-top: 2rpx solid #f5f5f5;padding-top: 10rpx;" wx:if="{{item.comment_reply!=''}}">商家回复:{{item.comment_reply}}</view>
+    </view>
+  </view>
+<!-- </empty-layout> -->

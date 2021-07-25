@@ -1,0 +1,31 @@
+<view class="flex flex-direction ">
+  <view class="flex flex-direction bg-white align-center justify-center padding-tb-xl margin-bottom-sm">
+    <view style="font-size:26rpx;color:#333333;">支付金额 </view>
+    <view style="font-size:60rpx;color:#333333;">0.00</view>
+  </view>
+  <radio-group class="block">
+    <view class="cu-form-group">
+      <view class="title flex">
+        <view>
+          <image style="width:55rpx;height:55rpx;margin-right:20rpx;" src="/images/icon_ye.png"></image>
+        </view>
+        <view>账户余额</view>
+      </view>
+      <view>
+        <radio class="yellow margin-left-sm" checked></radio>
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title flex">
+        <view>
+          <image style="width:55rpx;height:55rpx;margin-right:20rpx;" src="/images/icon_wx.png"></image>
+        </view>
+        <view>微信</view>
+      </view>
+      <view>
+        <radio class="yellow margin-left-sm"></radio>
+      </view>
+    </view>
+  </radio-group>
+  <button class="cu-btn bg-yellow lg text-white margin-xl round" style="margin-top:100rpx;" >确认支付</button>
+</view>

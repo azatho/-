@@ -1,0 +1,47 @@
+/* pages/shoukuan/index.wxss */
+page{
+    background-color: #FFC600;
+}
+.container{
+    position: absolute;
+    width: 590rpx;
+    background-color: #fff;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20rpx;
+}
+.containerTitle{
+    background: #EFEFEF;
+    border-radius: 20rpx 20rpx 0 0;
+    padding:23rpx 48rpx;
+}
+.photo{
+    width: 100rpx;
+    height: 100rpx;
+    margin: 28rpx auto;
+    border-radius: 10rpx;
+    background: #FFC600;
+}
+.name{
+    text-align: center;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333333;
+}
+.money{
+    width: 228rpx;
+    font-size: 46rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #999999;
+    margin-left: 32rpx;
+}
+.containerFooter{
+    width: 500rpx;
+    height: 180rpx;
+    background: #F5F5F5;
+    margin: 31rpx auto;
+    border-radius: 10rpx;
+}

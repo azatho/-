@@ -1,0 +1,91 @@
+<!--pages/reservation/index.wxml-->
+<view class="reservation">
+  <view class="store_logo"><image src='https://cdn.jianyunkeji.net//offstore/order/20191220/2019122013505192725_1576821051.jpg'></image></view>
+   <view class="reservation_title">
+      赵小姐在成都叭叭叭叭店
+   </view>
+   <view class="Booking_information">
+      <view></view>
+      <view>预约信息</view>
+      <view></view>
+   </view>
+   <view class="Booking_information_list">
+      <view class="Booking_information_list_item">
+          <view class="picker" bindtap='yuyueDate'>
+             <view>预约日期：</view>
+             <view>
+               <view>
+                  {{currentDate}}
+               </view>
+              <mp-icon icon="arrow"  size="{{12}}" style="color:rgba(204, 204, 204, 1)"></mp-icon>
+             </view>
+          </view>
+      </view>
+      <view class="Booking_information_list_item">
+         <view class="picker" bindtap='originDate'>
+            <view>预约时间：</view>
+            <view>
+              <view>
+                 {{currentDate}}
+              </view>
+             <mp-icon icon="arrow"  size="{{12}}" style="color:rgba(204, 204, 204, 1)"></mp-icon>
+            </view>
+          </view>
+      </view>
+      <view class="Booking_information_list_item">
+         <view class="picker" bindtap=''>
+            <view>套餐 <text style="color:rgba(204, 204, 204, 1)">（可不选）</text></view>
+            <view>
+              <view>
+                 请选择套餐
+              </view>
+             <mp-icon icon="arrow"  size="{{12}}" style="color:rgba(204, 204, 204, 1)"></mp-icon>
+            </view>
+          </view>
+      </view>
+   </view>
+</view>
+<view class="prop_date" wx:if='{{selectDate}}'>
+   <view class="prop_date_footer">
+      <view class="prop_date_footer_title">
+         <view class="prop_date_footer_title_top">
+            <text>请选择预约日期</text>
+            <image src='../../images/guanbi.png' catchtap='Shut_down' class="guanbi"></image>
+         </view>
+         <view class="prop_date_footer_title_bottom">
+            <view class="timer">
+               时间
+            </view>
+            <view class="prop_date_footer_title_bottom_box  {{select==index ? 'stive' : ''}}"  wx:for="{{boxList}}" wx:key="index" bindtap='slelectedBox' data-index='{{index}}'>
+               <view class="date {{select==index ? 'fontColor' : ''}}">{{item.month}}-{{item.day}}</view>
+               <view class="day {{select==index ? 'fontColor' : ''}}">{{item.weekday}}</view>
+            </view>
+         </view>
+         <view class="prop_date_footer_title_btn">
+            <button class="sureBtn" bindtap='fix'> 确定 </button>
+         </view>
+      </view>
+   </view>   
+</view>
+<view class="prop_date" wx:if='{{timeSelect}}'>
+   <view class="prop_date_footer">
+      <view class="prop_date_footer_title">
+         <view class="prop_date_footer_title_top">
+            <text>请选择预约时间</text>
+            <image src='../../images/guanbi.png' catchtap='Shut_down' class="guanbi"></image>
+         </view>
+         <view class="prop_date_footer_title_bottom">
+            <view class="timer">
+               预约时间
+            </view>
+            <view class="prop_date_footer_title_bottom_foot  {{select==index ? 'stive' : ''}}"  wx:for="{{choice_list}}" wx:key="index" bindtap='setmeal' data-index='{{index}}' data-id='{{item.choice_chose}}'>
+               <view class="food {{select==index ? 'fontColor' : ''}}">{{item.choice_text}}</view>
+               <view class="time {{select==index ? 'fontColor' : ''}}">{{item.start_time}}-{{item.end_time}}</view>
+            </view>
+         </view>
+         <view class="prop_date_footer_title_btn">
+            <button class="sureBtn"> 确定 </button>
+         </view>
+      </view>
+   </view>
+</view>

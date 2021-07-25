@@ -1,0 +1,16 @@
+<view class='content'>
+	<view class="top">
+		向商家付款</view>
+    <view class="logo">
+      <image src="{{CDN+obj.logo}}" style="width: 100%;height: 100%;"></image>
+    </view>
+	<view class="cline line">{{obj.merchant_name}}</view>
+  <view class="qrcode">
+    <image src="{{obj.qr}}" style="height: 100%;"></image>
+  </view>
+  <view class="cline1 line">打开微信[扫一扫]</view>
+  <view class="cline1 line" style="margin-top:10rpx">向商家付款</view>
+</view>
+<view class="delayPay">
+<text class="line cline2" style="margin-top:50rpx;">稍后付款</text>
+</view>

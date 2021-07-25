@@ -1,0 +1,5 @@
+<!--pages/help_list/index.wxml-->
+<view class="help_center">
+     <text>说明</text>
+     <mp-icon icon="arrow"  size="{{12}}"></mp-icon>
+</view>

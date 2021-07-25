@@ -1,0 +1,43 @@
+
+<view class="flex flex-direction padding" >
+  <view class="title">
+    <text class="tit ">充值金额</text>
+    <text class="tit2" bindtap="czjl">充值记录>></text>
+  </view>
+
+  <view class="display">
+    <block wx:for="{{list}}" wx:for-item="item" wx:key>
+      <view data-pay_money='{{item.recharge_cash}}' data-activity_id='{{item.activity_id}}' data-id="{{index}}" class="flex flex-direction margin-top-sm justify-center {{cut==index?'items':'item'}}" bindtap="select">
+        <view style="font-size:36rpx;text-align: center;">{{item.recharge_cash/100}}元</view>
+        <view style="font-size:20rpx;text-align: center;">赠送{{item.give_cash/100}}元</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="line"></view>
+<view class="flex flex-direction ">
+  <text class="tit" style="margin-left: 30rpx;">充值方式</text>
+  <radio-group class="block">
+    <view class="flex align-center" style="margin-left: 30rpx;">
+      <image src="../../images/wxpay.png" style="width:50rpx;height:50rpx;"></image>
+      <view class="tit" style="margin-left: 20rpx;">微信</view>
+      <radio class="yellow margin-left-sm" style="margin-left: 514rpx;" checked="true"></radio>
+    </view>
+    <!-- <view class="cu-form-group">
+      <view class="title">支付宝</view>
+      <radio class="yellow margin-left-sm"></radio>
+    </view> -->
+  </radio-group>
+</view>
+<view class="text flex" style="color:#333333;font-size:26rpx;position: fixed;bottom: 150rpx;left: 93rpx;width: 80%;" >
+  <view style="width: 100rpx;color:#333333;font-size:26rpx;">
+    提示：
+  </view>
+  <view style="color:#333333;font-size:26rpx;" wx:if="{{currentTxt.rank>0}}" >
+    <text>实际到账{{currentTxt.recharge_cash/100+currentTxt.give_cash/100}}元，并升级为</text><text style="color:#FFC600;">{{currentTxt.rank_name}}</text><text>可享受</text><text style="color:#FFC600;">{{currentTxt.discount}}%优惠折扣</text>
+  </view>
+  <view style="color:#333333;font-size:26rpx;" wx:else>
+    <text>实际到账{{currentTxt.recharge_cash/100+currentTxt.give_cash/100}}元</text>
+  </view>
+</view>
+<button class="cu-btn block bg-yellow margin lg" style="height:90rpx;line-height:90rpx;color:#333333;font-size:36rpx;border-radius:90rpx;position: fixed;bottom: 0;left: 0;width: 92%;" bindtap="sub"> 微信支付</button>

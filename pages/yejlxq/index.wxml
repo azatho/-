@@ -1,0 +1,29 @@
+<!--pages/yejlxq/index.wxml-->
+<view style="background-color: #fff;">
+  <view class="jilu">
+    <view class="money">{{info.type==16||info.type==21?'+':'-'}}{{info.amount/100}}</view>
+    <view>{{info.type_name}}</view>
+  </view>
+  <view class="detail">
+    <view class="leibie">
+      <view>余额</view>
+      <view class="cloBk">￥{{info.later/100}}</view>
+    </view>
+    <view class="leibie">
+      <view>当前状态</view>
+      <view class="cloBk">{{info.type==16||info.type==21?'充值':'支付'}}成功</view>
+    </view>
+    <view class="leibie">
+      <view>{{info.type==16||info.type==21?'充值':'支付'}}时间</view>
+      <view class="cloBk">{{info.time}}</view>
+    </view>
+    <view class="leibie" wx:if='{{info.type==16||info.type==21}}'>
+      <view>充值成功时间</view>
+      <view class="cloBk">{{info.time}}</view>
+    </view>
+    <view class="leibie">
+      <view>{{info.type==16||info.type==21?'交易':'订单'}}单号</view>
+      <view class="cloBk">{{info.order_id}}</view>
+    </view>
+  </view>
+</view>

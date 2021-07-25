@@ -1,0 +1,90 @@
+<view style="flex:1;">
+  <view class="cu-form-group margin-tb-sm ">
+    <view class="title">桌台信息</view>
+    <view>{{number_name}}</view>
+  </view>
+  <view class="Booking_information_list_item">
+    <view class="picker">
+      <view style="font-family: Source Han Sans CN;">用餐人数
+        <text style="color:rgba(204, 204, 204, 1)"></text>
+      </view>
+    </view>
+    <view class="ycrs">
+      <view wx:for="{{8}}" wx:key='index' bindtap="Lose_focus" class="{{index===xz_ycrs?'isActive':''}}" data-index="{{index}}">{{index+1}}</view>
+      <input focus type='number' bindinput='inputContent' style=" width: 239.8rpx;border:1px solid rgba(153,153,153,1);padding:8rpx 10rpx;font-size:24rpx;margin-top: 20rpx;" placeholder="请输入其他人数" wx:if="{{qtsr}}"></input>
+      <view class="transport" wx:if="{{!qtsr}}" bindtap='click_qt'>请输入其他人数</view>
+    </view>
+  </view>
+  <view style="height:20rpx;background:#fff;"></view>
+  <view class="Booking_information">
+    <view></view>
+    <view>我的菜品</view>
+    <view></view>
+  </view>
+  <view class="flex flex-direction bg-white">
+    <block wx:for="{{menu_list}}" wx:key='index'>
+      <view class="flex padding">
+        <image src="{{CDNIMG+item.dishes_url}}" style="width:116rpx;height:116rpx;border-radius:10rpx;border:2rpx solid #FFB400;"></image>
+        <view class="flex-noe flex flex-direction justify-between padding-left">
+          <view class="flex justify-between">
+            <text style="color:#222222;font-size:30rpx">{{item.dishes_name}}{{item.sku_spec==''?'':'('+item.sku_spec+')'}}</text>
+            <text style="color:#999999;font-size:26rpx">X{{item.count}}</text>
+          </view>
+          <view style="color:#D80F0F;font-size:30rpx">￥{{item.dishes_price/100}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+<view style="height:20rpx;background:#fff;"></view>
+  <view class="Booking_information">
+    <view></view>
+    <view>赠送菜品</view>
+    <view></view>
+  </view>
+    <view class="flex flex-direction bg-white">
+    <block wx:for="{{zp}}" wx:key='index'>
+      <view class="flex padding">
+        <image src="{{CDNIMG+item.dishes_url}}" style="width:116rpx;height:116rpx;border-radius:10rpx;border:2rpx solid #FFB400;"></image>
+        <view class="flex-noe flex flex-direction justify-between padding-left">
+          <view class="flex justify-between">
+            <text style="color:#222222;font-size:30rpx">{{item.dishes_name}}</text>
+            <text style="color:#999999;font-size:26rpx">X{{item.count}}</text>
+          </view>
+          <view style="color:#D80F0F;font-size:30rpx">￥{{item.dishes_price/100}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="cu-form-group" wx:if="{{first_cash!=0}}">
+    <view class="title">首单优惠</view>
+    <view>-￥{{first_cash/100}}</view>
+  </view>
+  <view class="cu-form-group" wx:if="{{deduct_cash!=0}}">
+    <view class="title">满减优惠</view>
+    <view>-￥{{deduct_cash/100}}</view>
+  </view>
+  <view class="cu-form-group" wx:if="{{rank_cash!=0}}">
+    <view class="title">会员优惠</view>
+    <view>-￥{{rank_cash/100}}</view>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">是否打包</view>
+    <checkbox-group bindchange='isCheckbox'>
+      <checkbox class="round yellow" checked="{{fromData.is_bale}}" value='1'></checkbox>
+    </checkbox-group>
+  </view>
+  <view class="bz margin-bottom-xl flex-direction align-start">
+    <view class="title">备注</view>
+    <textarea maxlength="-1" placeholder="请填写备注信息" bindinput="textareaAInput" auto-height style="margin-top: 20rpx;"></textarea>
+  </view>
+</view>
+  <view class="cu-form-group">
+    <view class="title">稍后出餐</view>
+    <checkbox-group bindchange='isChuCan'>
+      <checkbox class="round yellow" checked="{{false}}" value='1'></checkbox>
+    </checkbox-group>
+  </view>
+  <view style="display:flex;">
+    <view  style="font-size:36rpx;background: #333333;color: #fff;flex:1;padding:20rpx 10rpx;">合计：{{real_cash/100}}</view>
+    <view  style="font-size:36rpx;background: #FFB400;color: #333;width: 295rpx;text-align: center;padding:20rpx 0;" bindtap="sub">提交订单</view>
+  </view>

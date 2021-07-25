@@ -1,0 +1,145 @@
+<scroll-view scroll-y class="scrollPage">
+  <view style="position: relative;height:400rpx;">
+    <image src='/images/icon_mybj2.png' class='png' style='width:100%;height:379rpx'></image>
+    <view class="flex  justify-center align-center" style="position: absolute;z-index: 2;top:161rpx;left:35rpx;">
+      <block wx:if="{{login}}">
+        <view class="flex justify-center" >
+          <image src="{{userInfo.photo}}" class='png' style="width: 120rpx;height: 120rpx;border-radius: 50%;" bindtap="grxx"></image>
+        </view>
+        <view class="flex " style="margin-left: 22rpx;">
+          <view class="flex justify-start flex-direction" bindtap="grxx"  >
+            <view  class="flex justify-start align-center ">
+              <view style="color:#222222;font-size:18px;font-family:PingFang SC;font-weight:bold;"> {{userInfo.name}}</view>          
+              <view style="width: 170rpx;height: 36rpx;background: #333333;border: 1px solid #FFB202;border-radius: 18rpx;position: relative;margin-left: 10rpx;">
+                <image src="{{cdn+userInfo.rank_pic}}" style="width:44rpx;height: 44rpx;position: absolute;top: -5rpx;left: -4rpx;"></image>
+                <text style="color:#FDB402;margin-left: 45rpx;">{{userInfo.rank_name}}</text>
+              </view>
+              <image catchtap="chooseShare" src="../../images/bz.png" style="width: 34rpx;height: 34rpx;margin-left: 10rpx;"></image>
+            </view>
+            <view style="color:#222222;font-size:26rpx;font-family:PingFang SC;font-weight:400;">{{userInfo.phone}}</view>
+            <view style="color:#222222;font-size:26rpx;font-family:PingFang SC;font-weight:400;">{{userInfo.rank_time}}</view>
+          </view>
+          
+        </view>
+        <!-- <text class="text-center" style="color:#222222;font-size:18px;font-family:PingFang SC;font-weight:bold;" bindtap="grxx">{{userInfo.name}}</text>
+        <view class="text-center" style="color:#999999;font-size:12px;font-family:DINNextLTPro;font-weight:500;" bindtap="grxx">{{userInfo.phone}}</view> -->
+      </block>
+      <block wx:if="{{!login}}">
+      <view class="flex justify-center" catchtap="login">
+          <image src="/images/icon_tx.png" class='png' style="width: 112rpx;height: 112rpx;border-radius: 50%;" ></image>
+      </view>
+       <text catchtap="login" class="text-center;" style="color:#333333;font-size:18px;font-family:PingFang SC;font-weight:bold;margin-left: 30rpx;">登录/注册</text>
+       
+        <!-- <text class="text-center" style="width:150rpx;height:50rpx;line-height: 50rpx;border:1px solid #333333;border-radius:50rpx;font-size:30rpx;color:#333333;" bindtap="login">登录</text> -->
+      </block>
+    </view>
+  </view>
+  <view class="padding radius shadow-warp bg-white card flex flex-direction justify-between margin-top" style="font-size:26rpx;margin-top:-30px;">
+    <view class="flex justify-between">
+      <view>账户余额（元）</view>
+      <view bindtap="yemx">余额记录>></view>
+    </view>
+    <view class="flex justify-between">
+      <view style="font-size:50rpx;color:#333333;">{{userInfo.cash}}</view>
+      <text class="text-center" style="width:150rpx;height:50rpx;line-height: 50rpx;border:1px solid #333333;border-radius:50rpx;font-size:30rpx;color:#333333;" bindtap="charge">充值</text>
+    </view>
+  </view>
+  <view class="isDy" wx-if="{{is_server>0}}">
+     <view class="assistant">店员功能</view>
+     <view style="margin: 10rpx 0;" class="cu-item arrow">
+       <view class="cu-list menu sm-border" bindtap="bzdc">
+        <view  class="cu-item arrow">
+          <view style="display: flex;align-items: center;">
+            <view style="width: 60rpx;height: 60rpx;border-radius: 50%;background: pink;"><image src="../../images/dy1.png" style="width: 100%;height: 100%;"></image></view>
+            <view class="text-black" style="margin: 0 10rpx;font-family: PingFang SC;font-weight: 400;color: #333333;">帮助点餐</view>
+          </view>
+       </view>
+       </view>
+        <view style="height: 1px;background:#f5f5f5;margin: 5rpx 0;"></view>
+        <view  class="cu-list menu sm-border" bindtap="gkdd">
+          <view  class="cu-item arrow">
+            <view style="display: flex;align-items: center;">
+               <view style="width: 60rpx;height: 60rpx;border-radius: 50%;background: pink;"><image src="../../images/dy2.png" style="width: 100%;height: 100%;"></image></view>
+               <view class="text-black" style="margin: 0 10rpx;font-family: PingFang SC;font-weight: 400;color: #333333;">顾客订单</view>
+            </view>
+         </view>
+        </view>
+     </view>
+  </view>
+  <view class="cu-list menu sm-border">
+    <view class="cu-item arrow" bindtap="wddd">
+      <view class="content">
+        <image src="/images/icon_wddd.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">我的订单</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="wdyy">
+      <view class="content">
+        <image src="/images/yuyue.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">我的预约</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="wdpj">
+      <view class="content">
+        <image src="/images/icon_wdpj.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">我的评价</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="yjfk">
+      <view class="content">
+        <image src="/images/icon_yjfk.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">意见反馈</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="cjwt">
+      <view class="content">
+        <image src="/images/icon_cjwt.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">常见问题</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="bzzx">
+
+      <view class="content">
+        <image src="/images/icon_bzzx.png" class="png" mode="aspectFit"></image>
+        <text class="text-black">帮助中心</text>
+      </view>
+    </view>
+  </view>
+  <view bindtap='chooseShare' wx:if="{{hideShare}}"  style='z-index:6;position:fixed;top:0;bottom:0;right:0;left:0;background-color:#333333d1;display:flex;align-items:center;align-content:center;justify-content: center;'>
+    <view style='width:600rpx;background-color: #fff;border-radius:10rpx;'>
+    <view style="font-weight: 500;font-size: 30rpx;color: #333333;text-align: center;margin-top: 30rpx;margin-bottom: 30rpx;">会员说明</view>
+    <view style="width: 560rpx;border: 1px solid #CCCCCC;margin-left: 20rpx;">
+      <view class="flex justify-start">
+        <view class="flex justify-center align-center" style="width: 20%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          等级图标
+        </view>
+        <view class="flex justify-center align-center" style="width: 20%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          等级名称
+        </view>
+        <view class="flex justify-center align-center" style="width: 20%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          优惠折扣
+        </view>
+        <view class="flex justify-start align-center" style="width: 40%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          升级说明
+        </view>
+      </view>
+      <view class="flex justify-start" wx:for="{{userInfo.rank_list}}">
+        <view class="flex justify-center align-center" style="width: 20%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          <image src="{{cdn+item.rank_pic}}" style="width: 44rpx;height: 44rpx;"></image>
+        </view>
+        <view class="flex justify-center align-center" style="width: 20%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+         {{item.rank_name}}
+        </view>
+        <view class="flex justify-center align-center" style="width: 20%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          {{item.discount}}%
+        </view>
+        <view class="flex justify-start align-center" style="width: 40%;height: 70rpx;color: #333333;font-weight: 500;font-family: PingFang SC;font-size: 24rpx;">
+          1.累计消费：{{item.money/100}}元
+          2.充值金额：{{item.recharge_cash}}元
+        </view>
+      </view>
+    </view>
+    <view catchtap='chooseShare' style="font-weight: 400;font-size: 30rpx;color: #FFB400;text-align: center;border-top: #f5f5f5 1px solid;height: 90rpx;padding-top: 30rpx;margin-top: 40rpx;">我知道了</view>
+    </view>
+</view>
+</scroll-view>

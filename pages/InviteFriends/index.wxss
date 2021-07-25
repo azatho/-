@@ -1,0 +1,92 @@
+/* pages/InviteFriends/index.wxss */
+page{
+  height: 100%;
+  background:linear-gradient(0deg,rgba(255,198,0,1) 0%,rgba(255,221,105,1) 100%);
+}
+.dianpumsg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.txmsg{
+  width: 145rpx;
+  height: 145rpx;
+  margin: 145rpx 0 27rpx 0;
+}
+.dianpuName{
+  font-size:30rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.imgMsg{
+  width: 317rpx;
+  height: 190rpx;
+  margin: 51rpx 0 48rpx 0;
+}
+.xian{
+  width:639rpx;
+  height:1rpx;
+  border:1rpx dashed rgba(255,76,45,1);
+  margin: auto;
+}
+.yuyueMsg{
+  width: 614rpx;
+  margin: 46rpx 68rpx 46rpx;
+  padding: 15rpx 0 20rpx 0;
+}
+.detailMsg{
+  margin: 30rpx 0 0 31rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.leftMsg{
+  width: 106rpx;
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+  margin-right: 33rpx;
+}
+
+.rightMsg{
+  font-size:26rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+}
+.rightMsg1{
+  width: 322rpx;
+}
+.addressMsg{
+  display: flex;
+  flex-direction: row;
+}
+.shuxian{
+  width: 1rpx;
+  height: 50rpx;
+  background:rgba(51,51,51,1);
+  opacity:0.5;
+  border-radius:1rpx;
+  margin: 10rpx 0 0 26rpx;
+}
+.daohang{
+  padding-left: 26rpx;
+  text-align: center;
+}
+.daohangImg{
+  width: 60rpx;
+  height: 60rpx;
+}
+.save{
+  height: 122rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  font-family:Source Han Sans CN;
+  font-weight:300;
+  color:rgba(51,51,51,1);
+  line-height: 122rpx;
+  text-align: center;
+}
